@@ -2,6 +2,8 @@
 This is my project winform C# when I learn the subject "Windows Programming"
 
 # Guide
+- Open the command promt at location you want, or you can click the `Search` -> type `cmd`
+
 - Clone it to local of your computer:
 ```
 git clone https://github.com/qnhat2004/Windowsforms.git
