@@ -23,7 +23,7 @@ namespace WinFormsApp123
 		string stringConnect = @"Data Source=SUNSHINE;Initial Catalog=demo;Integrated Security=True";
 		SqlConnection cnn = null;
 		SqlDataAdapter da = null;
-		DataTable dt = null;
+		DataSet ds = null;
 		private void textBox2_TextChanged(object sender, EventArgs e)
 		{
 
@@ -49,70 +49,85 @@ namespace WinFormsApp123
 			cnn = new SqlConnection(stringConnect);
 			cnn.Open();
 			string sqlCommand = "select * from SACH";
-			da = new SqlDataAdapter(sqlCommand, cnn);
-			dt = new DataTable();
-			da.Fill(dt);
-			dataGridView1.DataSource = dt;
+			da = new SqlDataAdapter(sqlCommand, cnn); // DataAdapter is a bridge between database and dataset, in this case, it helps connect to the database and fill the data to the dataset
+			ds = new DataSet();
+			da.Fill(ds); // Fill the data from the database to the dataset
+			dataGridView1.DataSource = ds; // Display the data from the dataset to the dataGridView1
 			getData();
+
+			// Disable all the textboxes
+			//foreach(Control control in this.Controls)
+			//{
+			//	if (control is TextBox)
+			//		((TextBox)control).Enabled = false;
+			//}
+
+			//// Disable all the buttons except "btn_Them"
+			//foreach(Control control in this.Controls)
+			//{
+			//	if (control is Button && control.Name != "btn_Them")
+			//		((Button)control).Enabled = false;
+			//}
 		}
 
 		// Display data when start
 		private void getData()
 		{
 			string sqlCommand = "select * from SACH";
-			da = new SqlDataAdapter(sqlCommand, cnn);
-			dt = new DataTable();
-			da.Fill(dt);
-			dataGridView1.DataSource = dt;
+			da = new SqlDataAdapter(sqlCommand, cnn); // Connect to the database and do the command
+			ds = new DataSet();
+			da.Fill(ds); // Fill the data from the database to the dataset
+			dataGridView1.DataSource = ds;
+
+			// Display real number of column "Gia" to 4 numbers after the dot
+			//dataGridView1.Columns["Gia"].DefaultCellStyle.Format = "N4";
 		}
 
 		private void btn_Xoa_Click(object sender, EventArgs e)
 		{
 			string sqlCommand = "delete from SACH where MASACH = '" + txt_masach.Text + "'";
+			//string sqlCommand = ""
 			SqlCommand cmd = new SqlCommand(sqlCommand, cnn);
 			cmd.ExecuteNonQuery();
 			getData();
 		}
 
-		private void btn_Luu_Click(object sender, EventArgs e)
-		{
-			string sqlCommand = "update SACH set TIEUDE = N'" + txt_tieude.Text + "', TACGIA = N'" + textBox7.Text + "', NHAXUATBAN = N'" + textBox2.Text + "', NAMXUATBAN = N'" + textBox8.Text + "', GIA = N'" + txt_gia.Text + "', SOLUONG = N'" + txt_soluong.Text + "' where MASACH = '" + txt_masach.Text + "'";
-			SqlCommand cmd = new SqlCommand(sqlCommand, cnn);
-			cmd.ExecuteNonQuery();
-			getData();
-		}
-
+		// Cancel
 		private void btn_Boqua_Click(object sender, EventArgs e)
 		{
 			getData();
 		}
-		//private void btn_Them_Click(object sender, EventArgs e)
-				//{
-				//	string sqlCommand = "insert into SACH values('" + txt_masach.Text + "', N'" + tieude_txt.Text + "', N'" + textBox7.Text + "', N'" + textBox2.Text + "', N'" + textBox8.Text + "', N'" + gia_txt.Text + "', N'" + soluong_txt.Text + "')";
-				//	SqlCommand cmd = new SqlCommand(sqlCommand, cnn);
-				//	cmd.ExecuteNonQuery();
-				//	getData();
-				//}
 
 		// Insert data
 		private void btn_Them_Click(object sender, EventArgs e)
 		{
-			string sqlCommand = "INSERT INTO SACH VALUES (@ma, @ten)";
+			//string sqlCommand = "INSERT INTO SACH VALUES (@txt_ma.Text, @ten)";
 
-			//string sqlCommand = "INSERT INTO SACH VALUES ('" + txt_masach.Text + "', '" + txt_tieude + "', " + txt_gia + ", " + txt_soluong + ");";
+			string sqlCommand = "INSERT INTO SACH VALUES ('" + txt_masach.Text + "', '" + txt_tieude + "', " + txt_gia + ", " + txt_soluong + ");";
 			SqlCommand cmd = new SqlCommand(sqlCommand, cnn);
 			cmd.Parameters.AddWithValue("@ma", txt_masach.Text);
-			cmd.Parameters.AddWithValue("@ten", txt_tieude.Text);
+			cmd.Parameters.AddWithValue("@tieude", txt_tieude.Text);
+			cmd.Parameters.AddWithValue("@gia", txt_gia.Text);
+			cmd.Parameters.AddWithValue("@soluong", txt_soluong.Text);
 
-			cmd.ExecuteNonQuery();
+			try
+			{
+				cmd.ExecuteNonQuery(); // Execute the command, if it's invalid it'll raise the exception, otherwise it'll execute the command and return the number of rows affected
+			}
+			catch(Exception ex)
+			{
+				MessageBox.Show("Error: " + ex);
+			}
 			getData();
 		}
 
+		// Save data
 		private void btn_Luu_Click_1(object sender, EventArgs e)
 		{
 
 		}
 
+		// Delete data
 		private void btn_Xoa_Click_1(object sender, EventArgs e)
 		{
 

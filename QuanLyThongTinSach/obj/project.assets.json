@@ -475,11 +475,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Windowsforms\\WinFormsApp123\\WinFormsApp123.csproj",
+      "projectUniqueName": "D:\\Windowsforms\\QuanLyThongTinSach\\WinFormsApp123.csproj",
       "projectName": "WinFormsApp123",
-      "projectPath": "D:\\Windowsforms\\WinFormsApp123\\WinFormsApp123.csproj",
+      "projectPath": "D:\\Windowsforms\\QuanLyThongTinSach\\WinFormsApp123.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\Windowsforms\\WinFormsApp123\\obj\\",
+      "outputPath": "D:\\Windowsforms\\QuanLyThongTinSach\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",

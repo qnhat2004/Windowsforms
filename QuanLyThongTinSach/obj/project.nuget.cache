@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "i3R+TByhK44+sGgoDGBPhHVAQCaQoSWNwXIGnEwUys0bS0IQi6KnnFUgOjuEWsrqmF5e5Aje4Lu3ceu7kkuXIQ==",
+  "dgSpecHash": "uy2xSRgR21efuweUXkRWYplEQ8fIPmrezQi7NhCgHgfmdwDdmODKch5MNgxpg95ytgk4R0Asu3Xaw8ScctLiZQ==",
   "success": true,
-  "projectFilePath": "D:\\Windowsforms\\WinFormsApp123\\WinFormsApp123.csproj",
+  "projectFilePath": "D:\\Windowsforms\\QuanLyThongTinSach\\WinFormsApp123.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

@@ -117,7 +117,7 @@
 			// dataGridView1
 			// 
 			dataGridView1.AllowUserToOrderColumns = true;
-			dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+			dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			dataGridView1.Location = new Point(12, 127);
 			dataGridView1.Name = "dataGridView1";
