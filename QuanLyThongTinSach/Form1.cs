@@ -53,21 +53,21 @@ namespace WinFormsApp123
 			ds = new DataSet();
 			da.Fill(ds); // Fill the data from the database to the dataset
 			dataGridView1.DataSource = ds; // Display the data from the dataset to the dataGridView1
-			getData();
+			getData(); // 
 
-			// Disable all the textboxes
-			//foreach(Control control in this.Controls)
-			//{
-			//	if (control is TextBox)
-			//		((TextBox)control).Enabled = false;
-			//}
+			//Disable all the textBoxes
+			foreach (Control control in this.Controls)
+			{
+				if (control is TextBox)
+					((TextBox)control).Enabled = false;
+			}
 
-			//// Disable all the buttons except "btn_Them"
-			//foreach(Control control in this.Controls)
-			//{
-			//	if (control is Button && control.Name != "btn_Them")
-			//		((Button)control).Enabled = false;
-			//}
+			// Disable all the buttons except "btn_Them"
+			foreach (Control control in this.Controls)
+			{
+				if (control is Button && control.Name != "btn_Them")
+					((Button)control).Enabled = false;
+			}
 		}
 
 		// Display data when start
@@ -77,10 +77,10 @@ namespace WinFormsApp123
 			da = new SqlDataAdapter(sqlCommand, cnn); // Connect to the database and do the command
 			ds = new DataSet();
 			da.Fill(ds); // Fill the data from the database to the dataset
-			dataGridView1.DataSource = ds;
+			dataGridView1.DataSource = ds; // assign the data from the dataset to dataGridView1
 
 			// Display real number of column "Gia" to 4 numbers after the dot
-			//dataGridView1.Columns["Gia"].DefaultCellStyle.Format = "N4";
+			// dataGridView1.Columns["GIA"].DefaultCellStyle.Format = "N4";
 		}
 
 		private void btn_Xoa_Click(object sender, EventArgs e)
