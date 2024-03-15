@@ -1,0 +1,10 @@
+D:\Windowsforms\QuanLyCuaHangInternet\bin\Debug\QuanLyCuaHangInternet.exe.config
+D:\Windowsforms\QuanLyCuaHangInternet\bin\Debug\QuanLyCuaHangInternet.exe
+D:\Windowsforms\QuanLyCuaHangInternet\bin\Debug\QuanLyCuaHangInternet.pdb
+D:\Windowsforms\QuanLyCuaHangInternet\obj\Debug\QuanLyCuaHangInternet.csproj.AssemblyReference.cache
+D:\Windowsforms\QuanLyCuaHangInternet\obj\Debug\QuanLyCuaHangInternet.Form1.resources
+D:\Windowsforms\QuanLyCuaHangInternet\obj\Debug\QuanLyCuaHangInternet.Properties.Resources.resources
+D:\Windowsforms\QuanLyCuaHangInternet\obj\Debug\QuanLyCuaHangInternet.csproj.GenerateResource.cache
+D:\Windowsforms\QuanLyCuaHangInternet\obj\Debug\QuanLyCuaHangInternet.csproj.CoreCompileInputs.cache
+D:\Windowsforms\QuanLyCuaHangInternet\obj\Debug\QuanLyCuaHangInternet.exe
+D:\Windowsforms\QuanLyCuaHangInternet\obj\Debug\QuanLyCuaHangInternet.pdb

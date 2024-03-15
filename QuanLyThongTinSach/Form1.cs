@@ -48,12 +48,7 @@ namespace WinFormsApp123
 		{
 			cnn = new SqlConnection(stringConnect);
 			cnn.Open();
-			string sqlCommand = "select * from SACH";
-			da = new SqlDataAdapter(sqlCommand, cnn); // DataAdapter is a bridge between database and dataset, in this case, it helps connect to the database and fill the data to the dataset
-			ds = new DataSet();
-			da.Fill(ds); // Fill the data from the database to the dataset
-			dataGridView1.DataSource = ds; // Display the data from the dataset to the dataGridView1
-			getData(); // 
+			getData(); 
 
 			//Disable all the textBoxes
 			foreach (Control control in this.Controls)
@@ -79,8 +74,8 @@ namespace WinFormsApp123
 			da.Fill(ds); // Fill the data from the database to the dataset
 			dataGridView1.DataSource = ds; // assign the data from the dataset to dataGridView1
 
-			// Display real number of column "Gia" to 4 numbers after the dot
-			// dataGridView1.Columns["GIA"].DefaultCellStyle.Format = "N4";
+			//Display real number of column "Gia" to 4 numbers after the dotk
+			//dataGridView1.Columns["GIA"].DefaultCellStyle.Format = "N4";
 		}
 
 		private void btn_Xoa_Click(object sender, EventArgs e)
