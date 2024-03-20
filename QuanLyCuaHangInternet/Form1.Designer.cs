@@ -32,8 +32,6 @@
 			this.tabPage1 = new System.Windows.Forms.TabPage();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			this.btn_tt5 = new System.Windows.Forms.Button();
-			this.btn_tt4 = new System.Windows.Forms.Button();
-			this.btn_tt3 = new System.Windows.Forms.Button();
 			this.btn_tt2 = new System.Windows.Forms.Button();
 			this.panel13 = new System.Windows.Forms.Panel();
 			this.label13 = new System.Windows.Forms.Label();
@@ -90,6 +88,8 @@
 			this.panel16 = new System.Windows.Forms.Panel();
 			this.label16 = new System.Windows.Forms.Label();
 			this.txt_tien5 = new System.Windows.Forms.TextBox();
+			this.btn_tt4 = new System.Windows.Forms.Button();
+			this.btn_tt3 = new System.Windows.Forms.Button();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.tabControl1.SuspendLayout();
@@ -193,28 +193,6 @@
 			this.btn_tt5.Text = "Thanh toán";
 			this.btn_tt5.UseVisualStyleBackColor = false;
 			this.btn_tt5.Click += new System.EventHandler(this.btn_tt5_Click);
-			// 
-			// btn_tt4
-			// 
-			this.btn_tt4.BackColor = System.Drawing.Color.Chartreuse;
-			this.btn_tt4.Location = new System.Drawing.Point(648, 294);
-			this.btn_tt4.Name = "btn_tt4";
-			this.btn_tt4.Size = new System.Drawing.Size(274, 89);
-			this.btn_tt4.TabIndex = 23;
-			this.btn_tt4.Text = "Thanh toán";
-			this.btn_tt4.UseVisualStyleBackColor = false;
-			this.btn_tt4.Click += new System.EventHandler(this.btn_tt4_Click);
-			// 
-			// btn_tt3
-			// 
-			this.btn_tt3.BackColor = System.Drawing.Color.Chartreuse;
-			this.btn_tt3.Location = new System.Drawing.Point(648, 197);
-			this.btn_tt3.Name = "btn_tt3";
-			this.btn_tt3.Size = new System.Drawing.Size(274, 91);
-			this.btn_tt3.TabIndex = 22;
-			this.btn_tt3.Text = "Thanh toán";
-			this.btn_tt3.UseVisualStyleBackColor = false;
-			this.btn_tt3.Click += new System.EventHandler(this.btn_tt3_Click);
 			// 
 			// btn_tt2
 			// 
@@ -727,6 +705,28 @@
 			this.txt_tien5.Size = new System.Drawing.Size(77, 22);
 			this.txt_tien5.TabIndex = 0;
 			// 
+			// btn_tt4
+			// 
+			this.btn_tt4.BackColor = System.Drawing.Color.Chartreuse;
+			this.btn_tt4.Location = new System.Drawing.Point(648, 294);
+			this.btn_tt4.Name = "btn_tt4";
+			this.btn_tt4.Size = new System.Drawing.Size(274, 89);
+			this.btn_tt4.TabIndex = 23;
+			this.btn_tt4.Text = "Thanh toán";
+			this.btn_tt4.UseVisualStyleBackColor = false;
+			this.btn_tt4.Click += new System.EventHandler(this.btn_tt4_Click);
+			// 
+			// btn_tt3
+			// 
+			this.btn_tt3.BackColor = System.Drawing.Color.Chartreuse;
+			this.btn_tt3.Location = new System.Drawing.Point(648, 197);
+			this.btn_tt3.Name = "btn_tt3";
+			this.btn_tt3.Size = new System.Drawing.Size(274, 91);
+			this.btn_tt3.TabIndex = 22;
+			this.btn_tt3.Text = "Thanh toán";
+			this.btn_tt3.UseVisualStyleBackColor = false;
+			this.btn_tt3.Click += new System.EventHandler(this.btn_tt3_Click);
+			// 
 			// tabPage2
 			// 
 			this.tabPage2.Controls.Add(this.dataGridView1);
@@ -743,9 +743,9 @@
 			this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.dataGridView1.Enabled = false;
 			this.dataGridView1.Location = new System.Drawing.Point(3, 3);
 			this.dataGridView1.Name = "dataGridView1";
+			this.dataGridView1.ReadOnly = true;
 			this.dataGridView1.RowHeadersWidth = 51;
 			this.dataGridView1.RowTemplate.Height = 24;
 			this.dataGridView1.Size = new System.Drawing.Size(925, 489);

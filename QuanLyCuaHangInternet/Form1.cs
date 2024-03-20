@@ -32,6 +32,7 @@ namespace QuanLyCuaHangInternet
 			dt = new DataTable();
 			da.Fill(dt);
 			dataGridView1.DataSource = dt;
+			cnn.Close();
 		}
 		private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
 		{
@@ -254,12 +255,13 @@ namespace QuanLyCuaHangInternet
 					cnn.Open();
 					string sql = "Insert into BangKe(SoMay, GioVao, GioRa, SoGio, DonGia, ThanhTien) Values(@SoMay, @GioVao, @GioRa, @SoGio, @DonGia, @ThanhTien);";
 					SqlCommand cmd = new SqlCommand(sql, cnn);
-					cmd.Parameters.AddWithValue("@SoMay", btn_may2.Text);	
+					cmd.Parameters.AddWithValue("@SoMay", btn_may2.Text);
 					cmd.Parameters.AddWithValue("@GioVao", txt_vao2.Text);
 					cmd.Parameters.AddWithValue("@GioRa", txt_ra2.Text);
 					cmd.Parameters.AddWithValue("@SoGio", hour);
 					cmd.Parameters.AddWithValue("@DonGia", "5000đ/giờ");
 					cmd.Parameters.AddWithValue("@ThanhTien", txt_tien2.Text);
+					cmd.ExecuteNonQuery();
 					GetData();
 					txt_vao2.Text = txt_ra2.Text = "";
 					cnn.Close();
