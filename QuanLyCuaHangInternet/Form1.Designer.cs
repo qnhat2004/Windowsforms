@@ -146,8 +146,6 @@
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
 			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30F));
 			this.tableLayoutPanel1.Controls.Add(this.btn_tt5, 4, 4);
-			this.tableLayoutPanel1.Controls.Add(this.btn_tt4, 4, 3);
-			this.tableLayoutPanel1.Controls.Add(this.btn_tt3, 4, 2);
 			this.tableLayoutPanel1.Controls.Add(this.btn_tt2, 4, 1);
 			this.tableLayoutPanel1.Controls.Add(this.panel13, 3, 1);
 			this.tableLayoutPanel1.Controls.Add(this.panel11, 2, 2);
@@ -170,6 +168,8 @@
 			this.tableLayoutPanel1.Controls.Add(this.panel14, 3, 2);
 			this.tableLayoutPanel1.Controls.Add(this.panel15, 3, 3);
 			this.tableLayoutPanel1.Controls.Add(this.panel16, 3, 4);
+			this.tableLayoutPanel1.Controls.Add(this.btn_tt4, 4, 3);
+			this.tableLayoutPanel1.Controls.Add(this.btn_tt3, 4, 2);
 			this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
 			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -192,7 +192,7 @@
 			this.btn_tt5.TabIndex = 24;
 			this.btn_tt5.Text = "Thanh toán";
 			this.btn_tt5.UseVisualStyleBackColor = false;
-			this.btn_tt5.Click += new System.EventHandler(this.button10_Click);
+			this.btn_tt5.Click += new System.EventHandler(this.btn_tt5_Click);
 			// 
 			// btn_tt4
 			// 
@@ -203,7 +203,7 @@
 			this.btn_tt4.TabIndex = 23;
 			this.btn_tt4.Text = "Thanh toán";
 			this.btn_tt4.UseVisualStyleBackColor = false;
-			this.btn_tt4.Click += new System.EventHandler(this.button9_Click);
+			this.btn_tt4.Click += new System.EventHandler(this.btn_tt4_Click);
 			// 
 			// btn_tt3
 			// 
@@ -214,7 +214,7 @@
 			this.btn_tt3.TabIndex = 22;
 			this.btn_tt3.Text = "Thanh toán";
 			this.btn_tt3.UseVisualStyleBackColor = false;
-			this.btn_tt3.Click += new System.EventHandler(this.button8_Click);
+			this.btn_tt3.Click += new System.EventHandler(this.btn_tt3_Click);
 			// 
 			// btn_tt2
 			// 
@@ -277,7 +277,7 @@
 			this.txt_ra3.Name = "txt_ra3";
 			this.txt_ra3.Size = new System.Drawing.Size(47, 22);
 			this.txt_ra3.TabIndex = 0;
-			this.txt_ra3.TextChanged += new System.EventHandler(this.Form1_TextChanged);
+			this.txt_ra3.TextChanged += new System.EventHandler(this.txt_ra3_TextChanged);
 			this.txt_ra3.Leave += new System.EventHandler(this.textBox1_Leave);
 			// 
 			// panel4
@@ -342,7 +342,7 @@
 			this.txt_ra4.Name = "txt_ra4";
 			this.txt_ra4.Size = new System.Drawing.Size(47, 22);
 			this.txt_ra4.TabIndex = 0;
-			this.txt_ra4.TextChanged += new System.EventHandler(this.Form1_TextChanged);
+			this.txt_ra4.TextChanged += new System.EventHandler(this.txt_ra4_TextChanged);
 			this.txt_ra4.Leave += new System.EventHandler(this.textBox1_Leave);
 			// 
 			// panel3
@@ -646,7 +646,7 @@
 			this.txt_ra5.Name = "txt_ra5";
 			this.txt_ra5.Size = new System.Drawing.Size(47, 22);
 			this.txt_ra5.TabIndex = 0;
-			this.txt_ra5.TextChanged += new System.EventHandler(this.Form1_TextChanged);
+			this.txt_ra5.TextChanged += new System.EventHandler(this.txt_ra5_TextChanged);
 			this.txt_ra5.Leave += new System.EventHandler(this.textBox1_Leave);
 			// 
 			// panel14
