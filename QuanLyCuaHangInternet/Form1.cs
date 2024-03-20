@@ -46,8 +46,11 @@ namespace QuanLyCuaHangInternet
 		private void button1_Click_1(object sender, EventArgs e)
 		{
 			Button btn = (Button)sender;
+			ErrorBlinkStyle error = new ErrorBlinkStyle();
 			if (btn.BackColor == Color.Red)
-				MessageBox.Show("Máy đang dùng! Mời chọn máy khác");
+			{
+				MessageBox.Show("Máy đang dùng! Mời chọn máy khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+			}
 			else
 				btn.BackColor = Color.Red;
 		}
@@ -76,17 +79,19 @@ namespace QuanLyCuaHangInternet
 		{
 			TextBox txt = (TextBox)sender;
 			int hour;
-			if (txt.Text != "")
+			bool check = true;
+			if (txt.Text == "" || int.TryParse(txt.Text, out hour) == false)
 			{
-				if(int.TryParse(txt.Text, out hour))
-				{
-					hour = int.Parse(txt.Text);
-				}
-				else
-				{
-					MessageBox.Show("Invalid input! Please enter a interger number!");
-					txt.Focus();
-				}
+				check = false;
+			}
+			else if (hour < 0)
+			{
+				check = false;
+			}
+			if (check == false)
+			{
+				MessageBox.Show("Số giờ không hợp lệ! Hãy nhập số nguyên dương lớn hơn hoặc bằng 0!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				txt.Focus();
 			}
 		}
 
@@ -151,67 +156,67 @@ namespace QuanLyCuaHangInternet
 		{
 			if (txt_vao2.Text == "" || txt_ra2.Text == "")
 			{
-				txt_tien1.Text = "";
+				txt_tien2.Text = "";
 			}
 			else
 			{
-				int start = int.TryParse(txt_vao1.Text, out start) ? int.Parse(txt_vao1.Text) : -1;
-				int end = int.TryParse(txt_ra1.Text, out end) ? int.Parse(txt_ra1.Text) : -1;
+				int start = int.TryParse(txt_vao2.Text, out start) ? int.Parse(txt_vao2.Text) : -1;
+				int end = int.TryParse(txt_ra2.Text, out end) ? int.Parse(txt_ra2.Text) : -1;
 				if (start == -1 || end == -1)
-					txt_tien1.Text = "";
+					txt_tien2.Text = "";
 				else
-					txt_tien1.Text = Convert.ToString((end - start) * 5000);
+					txt_tien2.Text = Convert.ToString((end - start) * 5000);
 			}
 		}
 
 		private void txt_ra3_TextChanged(object sender, EventArgs e)
 		{
-			if (txt_vao2.Text == "" || txt_ra2.Text == "")
+			if (txt_vao3.Text == "" || txt_ra3.Text == "")
 			{
-				txt_tien1.Text = "";
+				txt_tien3.Text = "";
 			}
 			else
 			{
-				int start = int.TryParse(txt_vao1.Text, out start) ? int.Parse(txt_vao1.Text) : -1;
-				int end = int.TryParse(txt_ra1.Text, out end) ? int.Parse(txt_ra1.Text) : -1;
+				int start = int.TryParse(txt_vao3.Text, out start) ? int.Parse(txt_vao3.Text) : -1;
+				int end = int.TryParse(txt_ra3.Text, out end) ? int.Parse(txt_ra3.Text) : -1;
 				if (start == -1 || end == -1)
-					txt_tien1.Text = "";
+					txt_tien3.Text = "";
 				else
-					txt_tien1.Text = Convert.ToString((end - start) * 5000);
+					txt_tien3.Text = Convert.ToString((end - start) * 5000);
 			}
 		}
 
 		private void txt_ra4_TextChanged(object sender, EventArgs e)
 		{
-			if (txt_vao2.Text == "" || txt_ra2.Text == "")
+			if (txt_vao4.Text == "" || txt_ra4.Text == "")
 			{
 				txt_tien1.Text = "";
 			}
 			else
 			{
-				int start = int.TryParse(txt_vao1.Text, out start) ? int.Parse(txt_vao1.Text) : -1;
-				int end = int.TryParse(txt_ra1.Text, out end) ? int.Parse(txt_ra1.Text) : -1;
+				int start = int.TryParse(txt_vao4.Text, out start) ? int.Parse(txt_vao4.Text) : -1;
+				int end = int.TryParse(txt_ra4.Text, out end) ? int.Parse(txt_ra4.Text) : -1;
 				if (start == -1 || end == -1)
-					txt_tien1.Text = "";
+					txt_tien4.Text = "";
 				else
-					txt_tien1.Text = Convert.ToString((end - start) * 5000);
+					txt_tien4.Text = Convert.ToString((end - start) * 5000);
 			}
 		}
 
 		private void txt_ra5_TextChanged(object sender, EventArgs e)
 		{
-			if (txt_vao2.Text == "" || txt_ra2.Text == "")
+			if (txt_vao5.Text == "" || txt_ra5.Text == "")
 			{
-				txt_tien1.Text = "";
+				txt_tien5.Text = "";
 			}
 			else
 			{
-				int start = int.TryParse(txt_vao1.Text, out start) ? int.Parse(txt_vao1.Text) : -1;
-				int end = int.TryParse(txt_ra1.Text, out end) ? int.Parse(txt_ra1.Text) : -1;
+				int start = int.TryParse(txt_vao5.Text, out start) ? int.Parse(txt_vao5.Text) : -1;
+				int end = int.TryParse(txt_ra5.Text, out end) ? int.Parse(txt_ra5.Text) : -1;
 				if (start == -1 || end == -1)
-					txt_tien1.Text = "";
+					txt_tien5.Text = "";
 				else
-					txt_tien1.Text = Convert.ToString((end - start) * 5000);
+					txt_tien5.Text = Convert.ToString((end - start) * 5000);
 			}
 		}
 
@@ -239,7 +244,7 @@ namespace QuanLyCuaHangInternet
 					cmd.Parameters.AddWithValue("@GioVao", txt_vao1.Text);
 					cmd.Parameters.AddWithValue("@GioRa", txt_ra1.Text);
 					cmd.Parameters.AddWithValue("@SoGio", hour);
-					cmd.Parameters.AddWithValue("@DonGia", 5000);
+					cmd.Parameters.AddWithValue("@DonGia", "5000đ/giờ");
 					cmd.Parameters.AddWithValue("@ThanhTien", txt_tien1.Text);
 					cmd.ExecuteNonQuery();
 					GetData();
@@ -268,9 +273,10 @@ namespace QuanLyCuaHangInternet
 					cmd.Parameters.AddWithValue("@GioVao", txt_vao2.Text);
 					cmd.Parameters.AddWithValue("@GioRa", txt_ra2.Text);
 					cmd.Parameters.AddWithValue("@SoGio", hour);
-					cmd.Parameters.AddWithValue("@DonGia", 5000);
+					cmd.Parameters.AddWithValue("@DonGia", "5000đ/giờ");
 					cmd.Parameters.AddWithValue("@ThanhTien", txt_tien2.Text);
 					GetData();
+					txt_vao2.Text = txt_ra2.Text = "";
 					cnn.Close();
 				}
 			}
@@ -295,10 +301,11 @@ namespace QuanLyCuaHangInternet
 					cmd.Parameters.AddWithValue("@GioVao", txt_vao3.Text);
 					cmd.Parameters.AddWithValue("@GioRa", txt_ra3.Text);
 					cmd.Parameters.AddWithValue("@SoGio", hour);
-					cmd.Parameters.AddWithValue("@DonGia", 5000);
+					cmd.Parameters.AddWithValue("@DonGia", "5000đ/giờ");
 					cmd.Parameters.AddWithValue("@ThanhTien", txt_tien3.Text);
 					cmd.ExecuteNonQuery();
 					GetData();
+					txt_vao3.Text = txt_ra3.Text = "";
 					cnn.Close();
 				}
 			}
@@ -323,10 +330,11 @@ namespace QuanLyCuaHangInternet
 					cmd.Parameters.AddWithValue("@GioVao", txt_vao4.Text);
 					cmd.Parameters.AddWithValue("@GioRa", txt_ra4.Text);
 					cmd.Parameters.AddWithValue("@SoGio", hour);
-					cmd.Parameters.AddWithValue("@DonGia", 5000);
+					cmd.Parameters.AddWithValue("@DonGia", "5000đ/giờ");
 					cmd.Parameters.AddWithValue("@ThanhTien", txt_tien4.Text);
 					cmd.ExecuteNonQuery();
 					GetData();
+					txt_vao4.Text = txt_ra4.Text = "";
 					cnn.Close();
 				}
 			}
@@ -351,10 +359,11 @@ namespace QuanLyCuaHangInternet
 					cmd.Parameters.AddWithValue("@GioVao", txt_vao5.Text);
 					cmd.Parameters.AddWithValue("@GioRa", txt_ra5.Text);
 					cmd.Parameters.AddWithValue("@SoGio", hour);
-					cmd.Parameters.AddWithValue("@DonGia", 5000);
+					cmd.Parameters.AddWithValue("@DonGia", "5000đ/giờ");
 					cmd.Parameters.AddWithValue("@ThanhTien", txt_tien5.Text);
 					cmd.ExecuteNonQuery();
 					GetData();
+					txt_vao5.Text = txt_ra5.Text = "";
 					cnn.Close();
 				}
 			}

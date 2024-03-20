@@ -170,7 +170,8 @@
 			this.tableLayoutPanel1.Controls.Add(this.panel14, 3, 2);
 			this.tableLayoutPanel1.Controls.Add(this.panel15, 3, 3);
 			this.tableLayoutPanel1.Controls.Add(this.panel16, 3, 4);
-			this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+			this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
 			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
 			this.tableLayoutPanel1.RowCount = 5;
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
@@ -178,16 +179,16 @@
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.45813F));
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.68966F));
-			this.tableLayoutPanel1.Size = new System.Drawing.Size(926, 496);
+			this.tableLayoutPanel1.Size = new System.Drawing.Size(925, 489);
 			this.tableLayoutPanel1.TabIndex = 0;
 			this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
 			// 
 			// btn_tt5
 			// 
 			this.btn_tt5.BackColor = System.Drawing.Color.Chartreuse;
-			this.btn_tt5.Location = new System.Drawing.Point(648, 396);
+			this.btn_tt5.Location = new System.Drawing.Point(648, 389);
 			this.btn_tt5.Name = "btn_tt5";
-			this.btn_tt5.Size = new System.Drawing.Size(275, 97);
+			this.btn_tt5.Size = new System.Drawing.Size(274, 97);
 			this.btn_tt5.TabIndex = 24;
 			this.btn_tt5.Text = "Thanh toán";
 			this.btn_tt5.UseVisualStyleBackColor = false;
@@ -196,9 +197,9 @@
 			// btn_tt4
 			// 
 			this.btn_tt4.BackColor = System.Drawing.Color.Chartreuse;
-			this.btn_tt4.Location = new System.Drawing.Point(648, 300);
+			this.btn_tt4.Location = new System.Drawing.Point(648, 294);
 			this.btn_tt4.Name = "btn_tt4";
-			this.btn_tt4.Size = new System.Drawing.Size(275, 90);
+			this.btn_tt4.Size = new System.Drawing.Size(274, 89);
 			this.btn_tt4.TabIndex = 23;
 			this.btn_tt4.Text = "Thanh toán";
 			this.btn_tt4.UseVisualStyleBackColor = false;
@@ -207,9 +208,9 @@
 			// btn_tt3
 			// 
 			this.btn_tt3.BackColor = System.Drawing.Color.Chartreuse;
-			this.btn_tt3.Location = new System.Drawing.Point(648, 201);
+			this.btn_tt3.Location = new System.Drawing.Point(648, 197);
 			this.btn_tt3.Name = "btn_tt3";
-			this.btn_tt3.Size = new System.Drawing.Size(275, 93);
+			this.btn_tt3.Size = new System.Drawing.Size(274, 91);
 			this.btn_tt3.TabIndex = 22;
 			this.btn_tt3.Text = "Thanh toán";
 			this.btn_tt3.UseVisualStyleBackColor = false;
@@ -218,9 +219,9 @@
 			// btn_tt2
 			// 
 			this.btn_tt2.BackColor = System.Drawing.Color.Chartreuse;
-			this.btn_tt2.Location = new System.Drawing.Point(648, 102);
+			this.btn_tt2.Location = new System.Drawing.Point(648, 100);
 			this.btn_tt2.Name = "btn_tt2";
-			this.btn_tt2.Size = new System.Drawing.Size(275, 93);
+			this.btn_tt2.Size = new System.Drawing.Size(274, 91);
 			this.btn_tt2.TabIndex = 21;
 			this.btn_tt2.Text = "Thanh toán";
 			this.btn_tt2.UseVisualStyleBackColor = false;
@@ -230,9 +231,9 @@
 			// 
 			this.panel13.Controls.Add(this.label13);
 			this.panel13.Controls.Add(this.txt_tien2);
-			this.panel13.Location = new System.Drawing.Point(463, 102);
+			this.panel13.Location = new System.Drawing.Point(463, 100);
 			this.panel13.Name = "panel13";
-			this.panel13.Size = new System.Drawing.Size(179, 93);
+			this.panel13.Size = new System.Drawing.Size(179, 91);
 			this.panel13.TabIndex = 17;
 			// 
 			// label13
@@ -256,9 +257,9 @@
 			// 
 			this.panel11.Controls.Add(this.label11);
 			this.panel11.Controls.Add(this.txt_ra3);
-			this.panel11.Location = new System.Drawing.Point(278, 201);
+			this.panel11.Location = new System.Drawing.Point(278, 197);
 			this.panel11.Name = "panel11";
-			this.panel11.Size = new System.Drawing.Size(179, 93);
+			this.panel11.Size = new System.Drawing.Size(179, 91);
 			this.panel11.TabIndex = 15;
 			// 
 			// label11
@@ -283,9 +284,9 @@
 			// 
 			this.panel4.Controls.Add(this.label4);
 			this.panel4.Controls.Add(this.txt_vao2);
-			this.panel4.Location = new System.Drawing.Point(117, 102);
+			this.panel4.Location = new System.Drawing.Point(117, 100);
 			this.panel4.Name = "panel4";
-			this.panel4.Size = new System.Drawing.Size(155, 93);
+			this.panel4.Size = new System.Drawing.Size(155, 91);
 			this.panel4.TabIndex = 9;
 			// 
 			// label4
@@ -309,9 +310,9 @@
 			// btn_may2
 			// 
 			this.btn_may2.BackColor = System.Drawing.Color.LightGray;
-			this.btn_may2.Location = new System.Drawing.Point(3, 102);
+			this.btn_may2.Location = new System.Drawing.Point(3, 100);
 			this.btn_may2.Name = "btn_may2";
-			this.btn_may2.Size = new System.Drawing.Size(108, 93);
+			this.btn_may2.Size = new System.Drawing.Size(108, 91);
 			this.btn_may2.TabIndex = 5;
 			this.btn_may2.Text = "Máy 2";
 			this.btn_may2.UseVisualStyleBackColor = false;
@@ -321,9 +322,9 @@
 			// 
 			this.panel9.Controls.Add(this.label9);
 			this.panel9.Controls.Add(this.txt_ra4);
-			this.panel9.Location = new System.Drawing.Point(278, 300);
+			this.panel9.Location = new System.Drawing.Point(278, 294);
 			this.panel9.Name = "panel9";
-			this.panel9.Size = new System.Drawing.Size(179, 90);
+			this.panel9.Size = new System.Drawing.Size(179, 89);
 			this.panel9.TabIndex = 14;
 			// 
 			// label9
@@ -351,7 +352,7 @@
 			this.panel3.Controls.Add(this.txt_tongtien1);
 			this.panel3.Location = new System.Drawing.Point(463, 3);
 			this.panel3.Name = "panel3";
-			this.panel3.Size = new System.Drawing.Size(179, 93);
+			this.panel3.Size = new System.Drawing.Size(179, 91);
 			this.panel3.TabIndex = 3;
 			// 
 			// label3
@@ -384,7 +385,7 @@
 			this.panel2.Controls.Add(this.txt_ra1);
 			this.panel2.Location = new System.Drawing.Point(278, 3);
 			this.panel2.Name = "panel2";
-			this.panel2.Size = new System.Drawing.Size(179, 93);
+			this.panel2.Size = new System.Drawing.Size(179, 91);
 			this.panel2.TabIndex = 2;
 			// 
 			// label2
@@ -410,7 +411,7 @@
 			this.btn_may1.BackColor = System.Drawing.Color.LightGray;
 			this.btn_may1.Location = new System.Drawing.Point(3, 3);
 			this.btn_may1.Name = "btn_may1";
-			this.btn_may1.Size = new System.Drawing.Size(108, 93);
+			this.btn_may1.Size = new System.Drawing.Size(108, 91);
 			this.btn_may1.TabIndex = 0;
 			this.btn_may1.Text = "Máy 1";
 			this.btn_may1.UseVisualStyleBackColor = false;
@@ -422,7 +423,7 @@
 			this.panel1.Controls.Add(this.txt_vao1);
 			this.panel1.Location = new System.Drawing.Point(117, 3);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(155, 93);
+			this.panel1.Size = new System.Drawing.Size(155, 91);
 			this.panel1.TabIndex = 1;
 			// 
 			// label1
@@ -448,7 +449,7 @@
 			this.btn_tt1.BackColor = System.Drawing.Color.Chartreuse;
 			this.btn_tt1.Location = new System.Drawing.Point(648, 3);
 			this.btn_tt1.Name = "btn_tt1";
-			this.btn_tt1.Size = new System.Drawing.Size(275, 93);
+			this.btn_tt1.Size = new System.Drawing.Size(274, 91);
 			this.btn_tt1.TabIndex = 4;
 			this.btn_tt1.Text = "Thanh toán";
 			this.btn_tt1.UseVisualStyleBackColor = false;
@@ -457,9 +458,9 @@
 			// btn_may3
 			// 
 			this.btn_may3.BackColor = System.Drawing.Color.LightGray;
-			this.btn_may3.Location = new System.Drawing.Point(3, 201);
+			this.btn_may3.Location = new System.Drawing.Point(3, 197);
 			this.btn_may3.Name = "btn_may3";
-			this.btn_may3.Size = new System.Drawing.Size(108, 93);
+			this.btn_may3.Size = new System.Drawing.Size(108, 91);
 			this.btn_may3.TabIndex = 6;
 			this.btn_may3.Text = "Máy 3";
 			this.btn_may3.UseVisualStyleBackColor = false;
@@ -468,9 +469,9 @@
 			// btn_may4
 			// 
 			this.btn_may4.BackColor = System.Drawing.Color.LightGray;
-			this.btn_may4.Location = new System.Drawing.Point(3, 300);
+			this.btn_may4.Location = new System.Drawing.Point(3, 294);
 			this.btn_may4.Name = "btn_may4";
-			this.btn_may4.Size = new System.Drawing.Size(108, 90);
+			this.btn_may4.Size = new System.Drawing.Size(108, 89);
 			this.btn_may4.TabIndex = 7;
 			this.btn_may4.Text = "Máy 4";
 			this.btn_may4.UseVisualStyleBackColor = false;
@@ -479,7 +480,7 @@
 			// btn_may5
 			// 
 			this.btn_may5.BackColor = System.Drawing.Color.LightGray;
-			this.btn_may5.Location = new System.Drawing.Point(3, 396);
+			this.btn_may5.Location = new System.Drawing.Point(3, 389);
 			this.btn_may5.Name = "btn_may5";
 			this.btn_may5.Size = new System.Drawing.Size(108, 97);
 			this.btn_may5.TabIndex = 8;
@@ -491,9 +492,9 @@
 			// 
 			this.panel5.Controls.Add(this.label5);
 			this.panel5.Controls.Add(this.txt_vao3);
-			this.panel5.Location = new System.Drawing.Point(117, 201);
+			this.panel5.Location = new System.Drawing.Point(117, 197);
 			this.panel5.Name = "panel5";
-			this.panel5.Size = new System.Drawing.Size(155, 93);
+			this.panel5.Size = new System.Drawing.Size(155, 91);
 			this.panel5.TabIndex = 10;
 			// 
 			// label5
@@ -518,9 +519,9 @@
 			// 
 			this.panel7.Controls.Add(this.label7);
 			this.panel7.Controls.Add(this.txt_vao4);
-			this.panel7.Location = new System.Drawing.Point(117, 300);
+			this.panel7.Location = new System.Drawing.Point(117, 294);
 			this.panel7.Name = "panel7";
-			this.panel7.Size = new System.Drawing.Size(155, 90);
+			this.panel7.Size = new System.Drawing.Size(155, 89);
 			this.panel7.TabIndex = 12;
 			// 
 			// label7
@@ -546,7 +547,7 @@
 			this.panel8.Controls.Add(this.label8);
 			this.panel8.Controls.Add(this.txt_vao5);
 			this.panel8.Controls.Add(this.panel6);
-			this.panel8.Location = new System.Drawing.Point(117, 396);
+			this.panel8.Location = new System.Drawing.Point(117, 389);
 			this.panel8.Name = "panel8";
 			this.panel8.Size = new System.Drawing.Size(155, 97);
 			this.panel8.TabIndex = 13;
@@ -598,9 +599,9 @@
 			// 
 			this.panel10.Controls.Add(this.label10);
 			this.panel10.Controls.Add(this.txt_ra2);
-			this.panel10.Location = new System.Drawing.Point(278, 102);
+			this.panel10.Location = new System.Drawing.Point(278, 100);
 			this.panel10.Name = "panel10";
-			this.panel10.Size = new System.Drawing.Size(179, 93);
+			this.panel10.Size = new System.Drawing.Size(179, 91);
 			this.panel10.TabIndex = 15;
 			// 
 			// label10
@@ -625,7 +626,7 @@
 			// 
 			this.panel12.Controls.Add(this.label12);
 			this.panel12.Controls.Add(this.txt_ra5);
-			this.panel12.Location = new System.Drawing.Point(278, 396);
+			this.panel12.Location = new System.Drawing.Point(278, 389);
 			this.panel12.Name = "panel12";
 			this.panel12.Size = new System.Drawing.Size(179, 97);
 			this.panel12.TabIndex = 16;
@@ -652,9 +653,9 @@
 			// 
 			this.panel14.Controls.Add(this.label14);
 			this.panel14.Controls.Add(this.txt_tien3);
-			this.panel14.Location = new System.Drawing.Point(463, 201);
+			this.panel14.Location = new System.Drawing.Point(463, 197);
 			this.panel14.Name = "panel14";
-			this.panel14.Size = new System.Drawing.Size(179, 93);
+			this.panel14.Size = new System.Drawing.Size(179, 91);
 			this.panel14.TabIndex = 18;
 			// 
 			// label14
@@ -678,9 +679,9 @@
 			// 
 			this.panel15.Controls.Add(this.label15);
 			this.panel15.Controls.Add(this.txt_tien4);
-			this.panel15.Location = new System.Drawing.Point(463, 300);
+			this.panel15.Location = new System.Drawing.Point(463, 294);
 			this.panel15.Name = "panel15";
-			this.panel15.Size = new System.Drawing.Size(179, 90);
+			this.panel15.Size = new System.Drawing.Size(179, 89);
 			this.panel15.TabIndex = 19;
 			// 
 			// label15
@@ -704,7 +705,7 @@
 			// 
 			this.panel16.Controls.Add(this.label16);
 			this.panel16.Controls.Add(this.txt_tien5);
-			this.panel16.Location = new System.Drawing.Point(463, 396);
+			this.panel16.Location = new System.Drawing.Point(463, 389);
 			this.panel16.Name = "panel16";
 			this.panel16.Size = new System.Drawing.Size(179, 96);
 			this.panel16.TabIndex = 20;
@@ -739,16 +740,15 @@
 			// 
 			// dataGridView1
 			// 
-			this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.dataGridView1.Enabled = false;
-			this.dataGridView1.Location = new System.Drawing.Point(-4, 0);
+			this.dataGridView1.Location = new System.Drawing.Point(3, 3);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.RowHeadersWidth = 51;
 			this.dataGridView1.RowTemplate.Height = 24;
-			this.dataGridView1.Size = new System.Drawing.Size(929, 493);
+			this.dataGridView1.Size = new System.Drawing.Size(925, 489);
 			this.dataGridView1.TabIndex = 0;
 			this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
 			// 
