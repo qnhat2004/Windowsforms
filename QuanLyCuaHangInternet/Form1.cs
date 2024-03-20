@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace QuanLyCuaHangInternet
 {
@@ -17,6 +18,21 @@ namespace QuanLyCuaHangInternet
 			InitializeComponent();
 		}
 
+		string stringConnection = @"Data Source=SUNSHINE;Initial Catalog=QL_Internet;Integrated Security=True";
+		SqlConnection cnn = null;
+		SqlDataAdapter da = null;
+		DataTable dt = null;
+
+		private void GetData()
+		{
+			cnn = new SqlConnection(stringConnection);
+			cnn.Open();
+			string sql = "Select STT, SoMay as 'Số máy', GioVao as 'Giờ vào', GioRa as 'Giờ ra', SoGio as 'Số giờ sử dụng', DonGia as 'Đơn giá/Giờ', ThanhTien as 'Thành tiền' From BangKe";
+			da = new SqlDataAdapter(sql, cnn);
+			dt = new DataTable();
+			da.Fill(dt);
+			dataGridView1.DataSource = dt;
+		}
 		private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
 		{
 
@@ -30,10 +46,10 @@ namespace QuanLyCuaHangInternet
 		private void button1_Click_1(object sender, EventArgs e)
 		{
 			Button btn = (Button)sender;
-			if (btn.BackColor != Color.Red)
-				btn.BackColor = Color.Red;
-			else
+			if (btn.BackColor == Color.Red)
 				MessageBox.Show("Máy đang dùng! Mời chọn máy khác");
+			else
+				btn.BackColor = Color.Red;
 		}
 
 		private void button9_Click(object sender, EventArgs e)
@@ -48,7 +64,7 @@ namespace QuanLyCuaHangInternet
 
 		private void button2_Click(object sender, EventArgs e)
 		{
-
+			
 		}
 
 		private void button8_Click(object sender, EventArgs e)
@@ -58,27 +74,19 @@ namespace QuanLyCuaHangInternet
 
 		private void textBox1_Leave(object sender, EventArgs e)
 		{
-			//try
-			//{
-			//	int hour = int.Parse(textBox1.Text);
-			//}
-			//catch
-			//{
-			//	MessageBox.Show("Invalid");
-			//}
-
+			TextBox txt = (TextBox)sender;
 			int hour;
-			if(int.TryParse(textBox1.Text, out hour))
+			if (txt.Text != "")
 			{
-				// successful
-				if (txt_ra1.Name.Contains("ra1"))
+				if(int.TryParse(txt.Text, out hour))
 				{
-					txt_tongtien1.Text = 
+					hour = int.Parse(txt.Text);
 				}
-			}
-			else
-			{
-				MessageBox.Show("Invalid");
+				else
+				{
+					MessageBox.Show("Invalid input! Please enter a interger number!");
+					txt.Focus();
+				}
 			}
 		}
 
@@ -105,6 +113,251 @@ namespace QuanLyCuaHangInternet
 		private void textBox8_TextChanged(object sender, EventArgs e)
 		{
 
+		}
+
+		private void Form1_Load(object sender, EventArgs e)
+		{
+			GetData();
+		}
+
+		private void Form1_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txt_ra1_TextChange(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txt_ra1_TextChanged(object sender, EventArgs e)
+		{
+			if (txt_vao1.Text == "" || txt_ra1.Text == "")
+			{
+				txt_tien1.Text = "";
+			}
+			else
+			{
+				int start = int.TryParse(txt_vao1.Text, out start) ? int.Parse(txt_vao1.Text) : -1;
+				int end = int.TryParse(txt_ra1.Text, out end) ? int.Parse(txt_ra1.Text) : -1;
+				if (start == -1 || end == -1) 
+					txt_tien1.Text = "";
+				else
+					txt_tien1.Text = Convert.ToString((end - start) * 5000);
+			}
+		}
+
+		private void txt_ra2_TextChanged(object sender, EventArgs e)
+		{
+			if (txt_vao2.Text == "" || txt_ra2.Text == "")
+			{
+				txt_tien1.Text = "";
+			}
+			else
+			{
+				int start = int.TryParse(txt_vao1.Text, out start) ? int.Parse(txt_vao1.Text) : -1;
+				int end = int.TryParse(txt_ra1.Text, out end) ? int.Parse(txt_ra1.Text) : -1;
+				if (start == -1 || end == -1)
+					txt_tien1.Text = "";
+				else
+					txt_tien1.Text = Convert.ToString((end - start) * 5000);
+			}
+		}
+
+		private void txt_ra3_TextChanged(object sender, EventArgs e)
+		{
+			if (txt_vao2.Text == "" || txt_ra2.Text == "")
+			{
+				txt_tien1.Text = "";
+			}
+			else
+			{
+				int start = int.TryParse(txt_vao1.Text, out start) ? int.Parse(txt_vao1.Text) : -1;
+				int end = int.TryParse(txt_ra1.Text, out end) ? int.Parse(txt_ra1.Text) : -1;
+				if (start == -1 || end == -1)
+					txt_tien1.Text = "";
+				else
+					txt_tien1.Text = Convert.ToString((end - start) * 5000);
+			}
+		}
+
+		private void txt_ra4_TextChanged(object sender, EventArgs e)
+		{
+			if (txt_vao2.Text == "" || txt_ra2.Text == "")
+			{
+				txt_tien1.Text = "";
+			}
+			else
+			{
+				int start = int.TryParse(txt_vao1.Text, out start) ? int.Parse(txt_vao1.Text) : -1;
+				int end = int.TryParse(txt_ra1.Text, out end) ? int.Parse(txt_ra1.Text) : -1;
+				if (start == -1 || end == -1)
+					txt_tien1.Text = "";
+				else
+					txt_tien1.Text = Convert.ToString((end - start) * 5000);
+			}
+		}
+
+		private void txt_ra5_TextChanged(object sender, EventArgs e)
+		{
+			if (txt_vao2.Text == "" || txt_ra2.Text == "")
+			{
+				txt_tien1.Text = "";
+			}
+			else
+			{
+				int start = int.TryParse(txt_vao1.Text, out start) ? int.Parse(txt_vao1.Text) : -1;
+				int end = int.TryParse(txt_ra1.Text, out end) ? int.Parse(txt_ra1.Text) : -1;
+				if (start == -1 || end == -1)
+					txt_tien1.Text = "";
+				else
+					txt_tien1.Text = Convert.ToString((end - start) * 5000);
+			}
+		}
+
+		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+
+		}
+
+		private void btn_tt1_Click(object sender, EventArgs e)
+		{
+			if (txt_vao1.Text == "" || txt_ra1.Text == "" || txt_tien1.Text == "")
+			{
+				MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
+			}
+			else
+			{
+				btn_may1.BackColor = Color.LightGray;
+				string hour = Convert.ToString(Convert.ToInt32(txt_tien1.Text) / 5000);
+				using(SqlConnection conn = new SqlConnection(stringConnection))
+				{
+					conn.Open();
+					string sql = "Insert into BangKe(SoMay, GioVao, GioRa, SoGio, DonGia, ThanhTien) Values(@SoMay, @GioVao, @GioRa, @SoGio, @DonGia, @ThanhTien)";
+					SqlCommand cmd = new SqlCommand(sql, conn);
+					cmd.Parameters.AddWithValue("@SoMay", btn_may1.Text);
+					cmd.Parameters.AddWithValue("@GioVao", txt_vao1.Text);
+					cmd.Parameters.AddWithValue("@GioRa", txt_ra1.Text);
+					cmd.Parameters.AddWithValue("@SoGio", hour);
+					cmd.Parameters.AddWithValue("@DonGia", 5000);
+					cmd.Parameters.AddWithValue("@ThanhTien", txt_tien1.Text);
+					cmd.ExecuteNonQuery();
+					GetData();
+					cnn.Close();
+					txt_vao1.Text = txt_ra1.Text = "";
+				}
+			}
+		}
+
+		private void btn_tt2_Click(object sender, EventArgs e)
+		{
+			if (txt_vao2.Text == "" || txt_ra2.Text == "" || txt_tien2.Text == "")
+			{
+				MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
+			}
+			else
+			{
+				btn_may2.BackColor = Color.LightGray;
+				string hour = Convert.ToString(Convert.ToInt32(txt_tien2.Text) / 5000);
+				using (SqlConnection cnn = new SqlConnection(stringConnection))
+				{
+					cnn.Open();
+					string sql = "Insert into BangKe(SoMay, GioVao, GioRa, SoGio, DonGia, ThanhTien) Values(@SoMay, @GioVao, @GioRa, @SoGio, @DonGia, @ThanhTien);";
+					SqlCommand cmd = new SqlCommand(sql, cnn);
+					cmd.Parameters.AddWithValue("@SoMay", btn_may2.Text);	
+					cmd.Parameters.AddWithValue("@GioVao", txt_vao2.Text);
+					cmd.Parameters.AddWithValue("@GioRa", txt_ra2.Text);
+					cmd.Parameters.AddWithValue("@SoGio", hour);
+					cmd.Parameters.AddWithValue("@DonGia", 5000);
+					cmd.Parameters.AddWithValue("@ThanhTien", txt_tien2.Text);
+					GetData();
+					cnn.Close();
+				}
+			}
+		}
+
+		private void btn_tt3_Click(object sender, EventArgs e)
+		{
+			if (txt_ra3.Text == "" || txt_vao3.Text == "" || txt_tien3.Text == "")
+			{
+				MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
+			}
+			else
+			{
+				btn_may3.BackColor = Color.LightGray;
+				string hour = Convert.ToString(Convert.ToInt32(txt_tien3.Text) / 5000);
+				using (SqlConnection cnn = new SqlConnection(stringConnection))
+				{
+					cnn.Open();
+					string sql = "Insert into BangKe(SoMay, GioVao, GioRa, SoGio, DonGia, ThanhTien) Values(@SoMay, @GioVao, @GioRa, @SoGio, @DonGia, @ThanhTien);";
+					SqlCommand cmd = new SqlCommand(sql, cnn);
+					cmd.Parameters.AddWithValue("@SoMay", btn_may3.Text);
+					cmd.Parameters.AddWithValue("@GioVao", txt_vao3.Text);
+					cmd.Parameters.AddWithValue("@GioRa", txt_ra3.Text);
+					cmd.Parameters.AddWithValue("@SoGio", hour);
+					cmd.Parameters.AddWithValue("@DonGia", 5000);
+					cmd.Parameters.AddWithValue("@ThanhTien", txt_tien3.Text);
+					cmd.ExecuteNonQuery();
+					GetData();
+					cnn.Close();
+				}
+			}
+		}
+
+		private void btn_tt4_Click(object sender, EventArgs e)
+		{
+			if (txt_ra4.Text == "" || txt_vao4.Text == "" || txt_tien4.Text == "")
+			{
+				MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
+			}
+			else
+			{
+				btn_may4.BackColor = Color.LightGray;
+				string hour = Convert.ToString(Convert.ToInt32(txt_tien4.Text) / 5000);
+				using (SqlConnection cnn = new SqlConnection(stringConnection))
+				{
+					cnn.Open();
+					string sql = "Insert into BangKe(SoMay, GioVao, GioRa, SoGio, DonGia, ThanhTien) Values(@SoMay, @GioVao, @GioRa, @SoGio, @DonGia, @ThanhTien);";
+					SqlCommand cmd = new SqlCommand(sql, cnn);
+					cmd.Parameters.AddWithValue("@SoMay", btn_may4.Text);
+					cmd.Parameters.AddWithValue("@GioVao", txt_vao4.Text);
+					cmd.Parameters.AddWithValue("@GioRa", txt_ra4.Text);
+					cmd.Parameters.AddWithValue("@SoGio", hour);
+					cmd.Parameters.AddWithValue("@DonGia", 5000);
+					cmd.Parameters.AddWithValue("@ThanhTien", txt_tien4.Text);
+					cmd.ExecuteNonQuery();
+					GetData();
+					cnn.Close();
+				}
+			}
+		}
+
+		private void btn_tt5_Click(object sender, EventArgs e)
+		{
+			if (txt_ra5.Text == "" || txt_vao5.Text == "" || txt_tien5.Text == "")
+			{
+				MessageBox.Show("Vui lòng nhập đầy đủ thông tin!");
+			}
+			else
+			{
+				btn_may5.BackColor = Color.LightGray;
+				string hour = Convert.ToString(Convert.ToInt32(txt_tien5.Text) / 5000);
+				using (SqlConnection cnn = new SqlConnection(stringConnection))
+				{
+					cnn.Open();
+					string sql = "Insert into BangKe(SoMay, GioVao, GioRa, SoGio, DonGia, ThanhTien) Values(@SoMay, @GioVao, @GioRa, @SoGio, @DonGia, @ThanhTien);";
+					SqlCommand cmd = new SqlCommand(sql, cnn);
+					cmd.Parameters.AddWithValue("@SoMay", btn_may5.Text);
+					cmd.Parameters.AddWithValue("@GioVao", txt_vao5.Text);
+					cmd.Parameters.AddWithValue("@GioRa", txt_ra5.Text);
+					cmd.Parameters.AddWithValue("@SoGio", hour);
+					cmd.Parameters.AddWithValue("@DonGia", 5000);
+					cmd.Parameters.AddWithValue("@ThanhTien", txt_tien5.Text);
+					cmd.ExecuteNonQuery();
+					GetData();
+					cnn.Close();
+				}
+			}
 		}
 	}
 }
