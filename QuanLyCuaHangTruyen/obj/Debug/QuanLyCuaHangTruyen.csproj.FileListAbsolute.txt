@@ -1,0 +1,10 @@
+D:\Windowsforms\QuanLyCuaHangTruyen\bin\Debug\QuanLyCuaHangTruyen.exe.config
+D:\Windowsforms\QuanLyCuaHangTruyen\bin\Debug\QuanLyCuaHangTruyen.exe
+D:\Windowsforms\QuanLyCuaHangTruyen\bin\Debug\QuanLyCuaHangTruyen.pdb
+D:\Windowsforms\QuanLyCuaHangTruyen\obj\Debug\QuanLyCuaHangTruyen.csproj.AssemblyReference.cache
+D:\Windowsforms\QuanLyCuaHangTruyen\obj\Debug\QuanLyCuaHangTruyen.Form1.resources
+D:\Windowsforms\QuanLyCuaHangTruyen\obj\Debug\QuanLyCuaHangTruyen.Properties.Resources.resources
+D:\Windowsforms\QuanLyCuaHangTruyen\obj\Debug\QuanLyCuaHangTruyen.csproj.GenerateResource.cache
+D:\Windowsforms\QuanLyCuaHangTruyen\obj\Debug\QuanLyCuaHangTruyen.csproj.CoreCompileInputs.cache
+D:\Windowsforms\QuanLyCuaHangTruyen\obj\Debug\QuanLyCuaHangTruyen.exe
+D:\Windowsforms\QuanLyCuaHangTruyen\obj\Debug\QuanLyCuaHangTruyen.pdb

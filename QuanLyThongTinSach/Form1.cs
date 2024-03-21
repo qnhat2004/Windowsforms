@@ -24,6 +24,7 @@ namespace WinFormsApp123
 		SqlConnection cnn = null;
 		SqlDataAdapter da = null;
 		DataSet ds = null;
+
 		private void textBox2_TextChanged(object sender, EventArgs e)
 		{
 
@@ -73,7 +74,7 @@ namespace WinFormsApp123
 			ds = new DataSet();
 			da.Fill(ds); // Fill the data from the database to the dataset
 			dataGridView1.DataSource = ds; // assign the data from the dataset to dataGridView1
-
+			
 			//Display real number of column "Gia" to 4 numbers after the dotk
 			//dataGridView1.Columns["GIA"].DefaultCellStyle.Format = "N4";
 		}
