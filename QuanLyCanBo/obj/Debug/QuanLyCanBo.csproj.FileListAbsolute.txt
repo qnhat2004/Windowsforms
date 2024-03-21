@@ -1,0 +1,10 @@
+D:\Windowsforms\QuanLyCanBo\bin\Debug\QuanLyCanBo.exe.config
+D:\Windowsforms\QuanLyCanBo\bin\Debug\QuanLyCanBo.exe
+D:\Windowsforms\QuanLyCanBo\bin\Debug\QuanLyCanBo.pdb
+D:\Windowsforms\QuanLyCanBo\obj\Debug\QuanLyCanBo.csproj.AssemblyReference.cache
+D:\Windowsforms\QuanLyCanBo\obj\Debug\QuanLyCanBo.Form1.resources
+D:\Windowsforms\QuanLyCanBo\obj\Debug\QuanLyCanBo.Properties.Resources.resources
+D:\Windowsforms\QuanLyCanBo\obj\Debug\QuanLyCanBo.csproj.GenerateResource.cache
+D:\Windowsforms\QuanLyCanBo\obj\Debug\QuanLyCanBo.csproj.CoreCompileInputs.cache
+D:\Windowsforms\QuanLyCanBo\obj\Debug\QuanLyCanBo.exe
+D:\Windowsforms\QuanLyCanBo\obj\Debug\QuanLyCanBo.pdb
