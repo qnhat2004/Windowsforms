@@ -127,5 +127,12 @@ namespace QuanLyCuaHangTruyen
 			}
 			cnn.Close();
 		}
+
+		private void cbb_tentruyen_DropDownClosed(object sender, EventArgs e)
+		{
+
+		}
+
+		// TODO: Phải chia ra 2 bảng riêng: 1 bảng khách mượn, 1 bảng truyện. Tên truyện trong bảng truyện là khóa chính tham chiếu đến tên truyện trong bảng khách mượn
 	}
 }

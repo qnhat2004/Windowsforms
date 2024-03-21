@@ -193,6 +193,7 @@
 			this.cbb_tentruyen.TabIndex = 16;
 			this.cbb_tentruyen.DropDown += new System.EventHandler(this.cbb_tentruyen_DropDown);
 			this.cbb_tentruyen.SelectedIndexChanged += new System.EventHandler(this.cbb_tentruyen_SelectedIndexChanged);
+			this.cbb_tentruyen.DropDownClosed += new System.EventHandler(this.cbb_tentruyen_DropDownClosed);
 			// 
 			// Form1
 			// 

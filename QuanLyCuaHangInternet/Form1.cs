@@ -27,7 +27,7 @@ namespace QuanLyCuaHangInternet
 		{
 			cnn = new SqlConnection(stringConnection);
 			cnn.Open();
-			string sql = "select stt as 'STT', tenkhach as 'Tên khách', sdt as 'Số điện thoại', tentruyen as 'Tên truyện', ngaymuon as 'Ngày mượn', ngaytra as 'Ngày trả', thanhtien as 'Thành tiền', ghichu as 'Ghi chú' from thongtin";
+			string sql = "Select STT, SoMay as 'Số máy', GioVao as 'Giờ vào', GioRa as 'Giờ ra', SoGio as 'Số giờ sử dụng', DonGia as 'Đơn giá/Giờ', ThanhTien as 'Thành tiền' From BangKe";
 			da = new SqlDataAdapter(sql, cnn);
 			dt = new DataTable();
 			da.Fill(dt);

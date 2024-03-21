@@ -7,31 +7,31 @@
       "RelativeMoniker": "D:0:0:{42A78DB6-EF89-4EAB-8B84-D78F115B507F}|test.csproj|solutionrelative:form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42A78DB6-EF89-4EAB-8B84-D78F115B507F}|test.csproj|d:\\windowsforms\\test\\form3.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{42A78DB6-EF89-4EAB-8B84-D78F115B507F}|test.csproj|D:\\Windowsforms\\test\\form3.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{42A78DB6-EF89-4EAB-8B84-D78F115B507F}|test.csproj|solutionrelative:form3.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42A78DB6-EF89-4EAB-8B84-D78F115B507F}|test.csproj|d:\\windowsforms\\test\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{42A78DB6-EF89-4EAB-8B84-D78F115B507F}|test.csproj|D:\\Windowsforms\\test\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{42A78DB6-EF89-4EAB-8B84-D78F115B507F}|test.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42A78DB6-EF89-4EAB-8B84-D78F115B507F}|test.csproj|d:\\windowsforms\\test\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{42A78DB6-EF89-4EAB-8B84-D78F115B507F}|test.csproj|D:\\Windowsforms\\test\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{42A78DB6-EF89-4EAB-8B84-D78F115B507F}|test.csproj|solutionrelative:form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42A78DB6-EF89-4EAB-8B84-D78F115B507F}|test.csproj|d:\\windowsforms\\test\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{42A78DB6-EF89-4EAB-8B84-D78F115B507F}|test.csproj|D:\\Windowsforms\\test\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{42A78DB6-EF89-4EAB-8B84-D78F115B507F}|test.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42A78DB6-EF89-4EAB-8B84-D78F115B507F}|test.csproj|d:\\windowsforms\\test\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{42A78DB6-EF89-4EAB-8B84-D78F115B507F}|test.csproj|D:\\Windowsforms\\test\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{42A78DB6-EF89-4EAB-8B84-D78F115B507F}|test.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42A78DB6-EF89-4EAB-8B84-D78F115B507F}|test.csproj|d:\\windowsforms\\test\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{42A78DB6-EF89-4EAB-8B84-D78F115B507F}|test.csproj|D:\\Windowsforms\\test\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{42A78DB6-EF89-4EAB-8B84-D78F115B507F}|test.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{42A78DB6-EF89-4EAB-8B84-D78F115B507F}|test.csproj|d:\\windowsforms\\test\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{42A78DB6-EF89-4EAB-8B84-D78F115B507F}|test.csproj|D:\\Windowsforms\\test\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{42A78DB6-EF89-4EAB-8B84-D78F115B507F}|test.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -58,8 +58,7 @@
               "RelativeToolTip": "Form3.Designer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T09:28:10.284Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-19T09:28:10.284Z"
             },
             {
               "$type": "Document",
@@ -67,9 +66,9 @@
               "Title": "Form3.cs",
               "DocumentMoniker": "D:\\Windowsforms\\test\\Form3.cs",
               "RelativeDocumentMoniker": "Form3.cs",
-              "ToolTip": "D:\\Windowsforms\\test\\Form3.cs",
-              "RelativeToolTip": "Form3.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAEwBUAAAARAAAA",
+              "ToolTip": "D:\\Windowsforms\\test\\Form3.cs*",
+              "RelativeToolTip": "Form3.cs*",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAUwBYAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-19T09:22:16.57Z",
               "EditorCaption": ""
@@ -84,8 +83,7 @@
               "RelativeToolTip": "Form2.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAIA7wBUAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T09:21:19.792Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-19T09:21:19.792Z"
             },
             {
               "$type": "Document",
@@ -96,8 +94,7 @@
               "ToolTip": "D:\\Windowsforms\\test\\Form3.cs [Design]",
               "RelativeToolTip": "Form3.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T09:20:21.586Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-03-19T09:20:21.586Z"
             },
             {
               "$type": "Document",
@@ -108,8 +105,7 @@
               "ToolTip": "D:\\Windowsforms\\test\\Form2.cs [Design]",
               "RelativeToolTip": "Form2.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T09:18:05.883Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-03-19T09:18:05.883Z"
             },
             {
               "$type": "Document",
@@ -121,8 +117,7 @@
               "RelativeToolTip": "Form1.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T09:02:26.875Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-19T09:02:26.875Z"
             },
             {
               "$type": "Document",
@@ -134,8 +129,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T08:14:30.48Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-19T08:14:30.48Z"
             },
             {
               "$type": "Document",
@@ -146,8 +140,7 @@
               "ToolTip": "D:\\Windowsforms\\test\\Form1.cs [Design]",
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-19T08:14:07.799Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-03-19T08:14:07.799Z"
             }
           ]
         }
