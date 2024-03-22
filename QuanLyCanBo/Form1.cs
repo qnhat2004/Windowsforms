@@ -27,14 +27,14 @@ namespace QuanLyCanBo
 		{
 			cnn = new SqlConnection(connectionString);
 			cnn.Open();
-			SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
-			DataTable dt = new DataTable();
+			da = new SqlDataAdapter(sql, cnn);
+			dt = new DataTable();
 			da.Fill(dt);
 			dgv.DataSource = dt;
 			cnn.Close();
 		}
 
-		private bool CheckEmpty()
+		private bool AnyCellIsEmpty()
 		{
 			return txt_hoten.Text == "" || (!cb_nam.Checked && !cb_nu.Checked) || cbb_quequan.Text == "" || cbb_donvi.Text == "" || cbb_hocvi.Text == "";
 		}
@@ -86,7 +86,7 @@ namespace QuanLyCanBo
 
 		private void btn_them_Click(object sender, EventArgs e)
 		{
-			if (CheckEmpty())
+			if (AnyCellIsEmpty())
 				MessageBox.Show("Vui lòng nhập đầy đủ thông tin", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 			else
 			{
@@ -101,7 +101,7 @@ namespace QuanLyCanBo
 				cmd.Parameters.AddWithValue("@donvi", cbb_donvi.Text);
 				cmd.Parameters.AddWithValue("@hocvi", cbb_hocvi.Text);
 				cmd.ExecuteNonQuery();
-				fillDataToDataGridview(dataGridView1, sql);
+				getAllDataFromTable();
 				cnn.Close();
 			}
 		}
@@ -132,7 +132,7 @@ namespace QuanLyCanBo
 			cmd.Parameters.AddWithValue("@hocvi", cbb_hocvi.Text);
 			cmd.Parameters.AddWithValue("@selected_id", selected_id);
 			cmd.ExecuteNonQuery();
-			fillDataToDataGridview(dataGridView1, sql);
+			getAllDataFromTable();
 			cnn.Close();
 		}
 
@@ -167,7 +167,7 @@ namespace QuanLyCanBo
 			SqlCommand cmd = new SqlCommand(sql, cnn);
 			cmd.Parameters.AddWithValue("@selected_id", selected_id);
 			cmd.ExecuteNonQuery();
-			fillDataToDataGridview(dataGridView1, sql);
+			getAllDataFromTable();
 			cnn.Close();
 		}
 
