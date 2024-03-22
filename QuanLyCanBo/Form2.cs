@@ -113,5 +113,10 @@ namespace QuanLyCanBo
 		{
 			getDataFilteredByComboBoxes();
 		}
+
+		private void cbb_quequan_TextUpdate(object sender, EventArgs e)
+		{
+			getDataFilteredByComboBoxes();
+		}
 	}
 }

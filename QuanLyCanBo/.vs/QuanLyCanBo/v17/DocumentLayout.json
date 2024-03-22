@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "D:\\Windowsforms\\QuanLyCanBo\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EE5D7A0B-3A48-4DBB-B9EC-E87464285D0C}|QuanLyCanBo.csproj|D:\\Windowsforms\\QuanLyCanBo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE5D7A0B-3A48-4DBB-B9EC-E87464285D0C}|QuanLyCanBo.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EE5D7A0B-3A48-4DBB-B9EC-E87464285D0C}|QuanLyCanBo.csproj|D:\\Windowsforms\\QuanLyCanBo\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EE5D7A0B-3A48-4DBB-B9EC-E87464285D0C}|QuanLyCanBo.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE5D7A0B-3A48-4DBB-B9EC-E87464285D0C}|QuanLyCanBo.csproj|d:\\windowsforms\\quanlycanbo\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{EE5D7A0B-3A48-4DBB-B9EC-E87464285D0C}|QuanLyCanBo.csproj|D:\\Windowsforms\\QuanLyCanBo\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EE5D7A0B-3A48-4DBB-B9EC-E87464285D0C}|QuanLyCanBo.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE5D7A0B-3A48-4DBB-B9EC-E87464285D0C}|QuanLyCanBo.csproj|d:\\windowsforms\\quanlycanbo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE5D7A0B-3A48-4DBB-B9EC-E87464285D0C}|QuanLyCanBo.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{EE5D7A0B-3A48-4DBB-B9EC-E87464285D0C}|QuanLyCanBo.csproj|D:\\Windowsforms\\QuanLyCanBo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{EE5D7A0B-3A48-4DBB-B9EC-E87464285D0C}|QuanLyCanBo.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE5D7A0B-3A48-4DBB-B9EC-E87464285D0C}|QuanLyCanBo.csproj|D:\\Windowsforms\\QuanLyCanBo\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{EE5D7A0B-3A48-4DBB-B9EC-E87464285D0C}|QuanLyCanBo.csproj|solutionrelative:form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,17 +26,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Form1.cs",
               "DocumentMoniker": "D:\\Windowsforms\\QuanLyCanBo\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "D:\\Windowsforms\\QuanLyCanBo\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAAKgAAAAAAAAAAIAwwK0AAAAYAAAA",
+              "ViewState": "AQIAADsAAAAAAAAAAAAvwLcAAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-21T15:52:17.317Z",
               "IsPinned": true,
@@ -44,7 +44,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "D:\\Windowsforms\\QuanLyCanBo\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -52,8 +52,7 @@
               "RelativeToolTip": "Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-21T15:31:06.035Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -67,21 +66,22 @@
               "RelativeDocumentMoniker": "Form2.cs",
               "ToolTip": "D:\\Windowsforms\\QuanLyCanBo\\Form2.cs",
               "RelativeToolTip": "Form2.cs",
-              "ViewState": "AQIAAD4AAAAAAAAAAAAlwFUAAAAdAAAA",
+              "ViewState": "AQIAAD8AAAAAAAAAAAAYwHYAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-22T03:12:25.147Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Form2.cs [Design]",
               "DocumentMoniker": "D:\\Windowsforms\\QuanLyCanBo\\Form2.cs",
               "RelativeDocumentMoniker": "Form2.cs",
               "ToolTip": "D:\\Windowsforms\\QuanLyCanBo\\Form2.cs [Design]",
               "RelativeToolTip": "Form2.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T03:07:52.78Z"
+              "WhenOpened": "2024-03-22T03:07:52.78Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

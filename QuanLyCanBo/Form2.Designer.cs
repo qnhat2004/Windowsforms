@@ -47,6 +47,7 @@
 			this.cbb_quequan.TabIndex = 0;
 			this.cbb_quequan.DropDown += new System.EventHandler(this.cbb_quequan_DropDown);
 			this.cbb_quequan.SelectedIndexChanged += new System.EventHandler(this.cbb_quequan_SelectedIndexChanged);
+			this.cbb_quequan.TextUpdate += new System.EventHandler(this.cbb_quequan_TextUpdate);
 			this.cbb_quequan.TextChanged += new System.EventHandler(this.cbb_quequan_TextChanged);
 			// 
 			// label1

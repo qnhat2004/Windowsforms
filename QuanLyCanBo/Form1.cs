@@ -177,6 +177,7 @@ namespace QuanLyCanBo
 			f2.Show();
 		}
 
+		// Get all data from table 'canbo' and display to dataGridView1
 		internal void getAllDataFromTable()
 		{
 			string sql = "select id, hoten as 'Họ tên', gioitinh as 'Giới tính', quequan as 'Quê quán', donvi as 'Đơn vị', hocvi as 'Học hàm / Học vị' from canbo";
