@@ -1,11 +1,10 @@
 # Windowsforms 
-This is my project winform C# when I learn the subject "Windows Programming"
+Bài tập winform mình làm trong quá trình học Lập trình Window
 
 # Guide
-- Open the command promt at location you want, or you can click the `Search` -> type `cmd`
-
-- Clone it to local of your computer:
+- Vào search -> Gõ cmd
+- Copy dòng này vào cmd
 ```
 git clone https://github.com/qnhat2004/Windowsforms.git
 ```
-- Open the solution file at each project in your IDE. Example, I choose the folder "Name and Age", in it I open file `WindowsFormsApp2.sln` by `Visual Studio`. Then you can run the project and view code of it.
+- Mở file solution bạn muốn trong các project bằng IDE
