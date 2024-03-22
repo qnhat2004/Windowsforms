@@ -8,3 +8,4 @@ D:\Windowsforms\QuanLyCanBo\obj\Debug\QuanLyCanBo.csproj.GenerateResource.cache
 D:\Windowsforms\QuanLyCanBo\obj\Debug\QuanLyCanBo.csproj.CoreCompileInputs.cache
 D:\Windowsforms\QuanLyCanBo\obj\Debug\QuanLyCanBo.exe
 D:\Windowsforms\QuanLyCanBo\obj\Debug\QuanLyCanBo.pdb
+D:\Windowsforms\QuanLyCanBo\obj\Debug\QuanLyCanBo.Form2.resources
