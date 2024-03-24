@@ -1,0 +1,10 @@
+D:\Windowsforms\RapChieuPhim\bin\Debug\RapChieuPhim.exe.config
+D:\Windowsforms\RapChieuPhim\bin\Debug\RapChieuPhim.exe
+D:\Windowsforms\RapChieuPhim\bin\Debug\RapChieuPhim.pdb
+D:\Windowsforms\RapChieuPhim\obj\Debug\RapChieuPhim.csproj.AssemblyReference.cache
+D:\Windowsforms\RapChieuPhim\obj\Debug\RapChieuPhim.Form1.resources
+D:\Windowsforms\RapChieuPhim\obj\Debug\RapChieuPhim.Properties.Resources.resources
+D:\Windowsforms\RapChieuPhim\obj\Debug\RapChieuPhim.csproj.GenerateResource.cache
+D:\Windowsforms\RapChieuPhim\obj\Debug\RapChieuPhim.csproj.CoreCompileInputs.cache
+D:\Windowsforms\RapChieuPhim\obj\Debug\RapChieuPhim.exe
+D:\Windowsforms\RapChieuPhim\obj\Debug\RapChieuPhim.pdb

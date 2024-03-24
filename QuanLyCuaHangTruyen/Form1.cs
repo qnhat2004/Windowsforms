@@ -19,14 +19,15 @@ namespace QuanLyCuaHangTruyen
 			InitializeComponent();
 		}
 
-		string connectionString = "Data Source=SUNSHINE;Initial Catalog=CuaHangTruyen;Integrated Security=True";
+		string connectionString = "Data Source=SUNSHINE;Database=CuaHangTruyen;Integrated Security=True";
 		DataTable dt = null;
 		SqlDataAdapter da = null;
 		SqlConnection cnn = null;
 
 		private void getData()
 		{
-			string sql = "select stt as 'STT', tenkhach as 'Tên khách', sdt as 'Số điện thoại', tentruyen as 'Tên truyện', ngaymuon as 'Ngày mượn', ngaytra as 'Ngày trả', thanhtien as 'Thành tiền', ghichu as 'Ghi chú' from thongtin"; 
+			//string sql = "select stt as 'STT', tenkhach as 'Tên khách', sdt as 'Số điện thoại', tentruyen as 'Tên truyện', ngaymuon as 'Ngày mượn', ngaytra as 'Ngày trả', thanhtien as 'Thành tiền', ghichu as 'Ghi chú' from khachhang";
+			string sql = "select * from khachhang";
 			cnn = new SqlConnection(connectionString);
 			cnn.Open();
 			da = new SqlDataAdapter(sql, cnn);
@@ -95,18 +96,13 @@ namespace QuanLyCuaHangTruyen
 		{
 			cnn = new SqlConnection(connectionString);
 			cnn.Open();
-			string sql = "select tentruyen from thongtin";
-			using(SqlCommand cmd = new SqlCommand(sql, cnn))
-			{
-				using(SqlDataReader dr = cmd.ExecuteReader())
-				{
-					cbb_tentruyen.Items.Clear();
-					while(dr.Read())
-					{
-						cbb_tentruyen.Items.Add(dr["tentruyen"]);
-					}
-				}
-			}
+			string sql = "select tentruyen from truyen";
+			SqlCommand cmd = new SqlCommand(sql, cnn);
+			SqlDataAdapter da = new SqlDataAdapter(cmd);
+			DataTable dt = new DataTable();
+			da.Fill(dt);
+			cbb_tentruyen.DataSource = dt;
+			cbb_tentruyen.DisplayMember = "tentruyen";
 		}
 
 		private void cbb_tentruyen_SelectedIndexChanged(object sender, EventArgs e)
