@@ -3,11 +3,11 @@
   "WorkspaceRootPath": "D:\\Windowsforms\\QuanLyCuaHangTruyen\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{535A6E77-69B1-4F88-B631-BB91977581AE}|QuanLyCuaHangTruyen.csproj|D:\\Windowsforms\\QuanLyCuaHangTruyen\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{535A6E77-69B1-4F88-B631-BB91977581AE}|QuanLyCuaHangTruyen.csproj|d:\\windowsforms\\quanlycuahangtruyen\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{535A6E77-69B1-4F88-B631-BB91977581AE}|QuanLyCuaHangTruyen.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{535A6E77-69B1-4F88-B631-BB91977581AE}|QuanLyCuaHangTruyen.csproj|d:\\windowsforms\\quanlycuahangtruyen\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{535A6E77-69B1-4F88-B631-BB91977581AE}|QuanLyCuaHangTruyen.csproj|D:\\Windowsforms\\QuanLyCuaHangTruyen\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{535A6E77-69B1-4F88-B631-BB91977581AE}|QuanLyCuaHangTruyen.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -28,7 +28,7 @@
               "RelativeDocumentMoniker": "Form1.cs",
               "ToolTip": "D:\\Windowsforms\\QuanLyCuaHangTruyen\\Form1.cs",
               "RelativeToolTip": "Form1.cs",
-              "ViewState": "AQIAABgAAAAAAAAAAAAtwCIAAAADAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAHAAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-21T03:27:05.518Z",
               "IsPinned": true,

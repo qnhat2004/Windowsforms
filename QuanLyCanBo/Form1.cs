@@ -53,6 +53,18 @@ namespace QuanLyCanBo
 		{
 			getAllDataFromTable();
 			dataGridView1.Columns[0].Visible = false; // Hide 'id' column
+			FillComboboxWithDistinctValues("donvi", cbb_donvi);
+			FillComboboxWithDistinctValues("hocvi", cbb_hocvi);
+
+			if (cbb_donvi.Items.Count > 0)
+			{
+				cbb_donvi.Text = cbb_donvi.Items[0].ToString();
+			}
+			if (cbb_hocvi.Items.Count > 0)
+			{
+				cbb_hocvi.Text = cbb_hocvi.Items[0].ToString();
+			}
+
 		}
 
 		internal void FillComboboxWithDistinctValues(string column, ComboBox cbb)

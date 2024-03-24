@@ -19,22 +19,41 @@ namespace QuanLyCuaHangTruyen
 			InitializeComponent();
 		}
 
-		string connectionString = "Data Source=SUNSHINE;Database=CuaHangTruyen;Integrated Security=True";
+		string connectionString = "Data Source=SUNSHINE;Initial Catalog=CuaHangTruyen;Integrated Security=True";
 		DataTable dt = null;
 		SqlDataAdapter da = null;
 		SqlConnection cnn = null;
 
-		private void getData()
+		internal DataTable FillData(string sql, object[] para = null)
 		{
-			//string sql = "select stt as 'STT', tenkhach as 'Tên khách', sdt as 'Số điện thoại', tentruyen as 'Tên truyện', ngaymuon as 'Ngày mượn', ngaytra as 'Ngày trả', thanhtien as 'Thành tiền', ghichu as 'Ghi chú' from khachhang";
-			string sql = "select * from khachhang";
+			DataTable dt = new DataTable();
 			cnn = new SqlConnection(connectionString);
 			cnn.Open();
-			da = new SqlDataAdapter(sql, cnn);
-			dt = new DataTable();
+			SqlCommand cmd = new SqlCommand(sql, cnn);
+			if (para != null)
+			{
+				string[] tmp = sql.Split(' ');
+				List<string> strings = new List<string>();
+				foreach (string s in tmp)
+				{
+					if (s[0] == '@')
+						strings.Add(s);
+				}
+				for (int i = 0; i < para.Length; ++i)
+				{
+					cmd.Parameters.AddWithValue(strings[i], para[i]);
+				}
+			}
+			SqlDataAdapter da = new SqlDataAdapter(cmd);
 			da.Fill(dt);
-			dataGridView1.DataSource = dt;
 			cnn.Close();
+			return dt;
+		}
+
+		private void getAllData()
+		{
+			string sql = "select truyen.giatruyen, stt as 'STT', tenkhach as 'Tên khách', sdt as 'Số điện thoại', khachhang.tentruyen as 'Tên truyện', ngaymuon as 'Ngày mượn', ngaytra as 'Ngày trả', thanhtien as 'Thành tiền', ghichu as 'Ghi chú' from khachhang join truyen on khachhang.tentruyen = truyen.tentruyen";
+			dtgv.DataSource = FillData(sql); 
 		}
 
 		private void pictureBox1_Click(object sender, EventArgs e)
@@ -50,19 +69,22 @@ namespace QuanLyCuaHangTruyen
 		private void txt_sdt_Leave(object sender, EventArgs e)
 		{
 			long sdt;
-			if (!long.TryParse(txt_sdt.Text, out sdt))
+			if (txt_sdt.Text != "")
 			{
-				MessageBox.Show("Số điện thoại không hợp lệ");
-			}
-			else
-			{
-				sdt = long.Parse(txt_sdt.Text);
+				if (!long.TryParse(txt_sdt.Text, out sdt))
+				{
+					MessageBox.Show("Số điện thoại không hợp lệ");
+				}
+				else
+				{
+					sdt = long.Parse(txt_sdt.Text);
+				}
 			}
 		}
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
-			getData();
+			getAllData();
 		}
 
 		private void btn_muon_Click(object sender, EventArgs e)
@@ -73,60 +95,58 @@ namespace QuanLyCuaHangTruyen
 			{
 				int days = (dtp_ngaytra.Value - dtp_ngaymuon.Value).Days;
 				int thanh_tien = days * Convert.ToInt32(txt_dongia.Text);
-				cnn = new SqlConnection(connectionString);
-				cnn.Open();
-				string sql = "insert into thongtin (tenkhach, sdt, tentruyen, dongia, ngaymuon, ngaytra, thanhtien, ghichu) values (@tenkhach, @sdt, @tentruyen, @dongia, @ngaymuon, @ngaytra, @thanhtien, @ghichu";
-				using (SqlCommand cmd = new SqlCommand(sql, cnn))
-				{
-					cmd.Parameters.AddWithValue("@tenkhach", txt_tenkhach.Text);
-					cmd.Parameters.AddWithValue("@sdt", txt_sdt.Text);
-					cmd.Parameters.AddWithValue("@tentruyen", cbb_tentruyen.Text);
-					cmd.Parameters.AddWithValue("@ngaymuon", dtp_ngaymuon.Value);
-					cmd.Parameters.AddWithValue("@ngaytra", dtp_ngaytra.Text);
-					cmd.Parameters.AddWithValue("@thanhtien", Convert.ToString(thanh_tien));
-					cmd.Parameters.AddWithValue("@ghichu", "Chưa trả");
-					cmd.ExecuteNonQuery();
-					getData();
-					cnn.Close();
-				}
+				string sql = "insert into khachhang (tenkhach, sdt, tentruyen, dongia, ngaymuon, ngaytra, thanhtien, ghichu) values ( @tenkhach, @sdt, @tentruyen, @dongia, @ngaymuon, @ngaytra, @thanhtien, @ghichu )";
+				object[] para = new object[]{ txt_tenkhach.Text, txt_sdt.Text, cbb_tentruyen.Text, txt_dongia.Text, dtp_ngaymuon.Text, dtp_ngaytra.Text, thanh_tien.ToString(), "Chưa trả" };
+				FillData(sql, para);
 			}
 		}
 
 		private void cbb_tentruyen_DropDown(object sender, EventArgs e)
 		{
-			cnn = new SqlConnection(connectionString);
-			cnn.Open();
 			string sql = "select tentruyen from truyen";
-			SqlCommand cmd = new SqlCommand(sql, cnn);
-			SqlDataAdapter da = new SqlDataAdapter(cmd);
-			DataTable dt = new DataTable();
-			da.Fill(dt);
-			cbb_tentruyen.DataSource = dt;
+			cbb_tentruyen.DataSource = FillData(sql);
 			cbb_tentruyen.DisplayMember = "tentruyen";
 		}
 
 		private void cbb_tentruyen_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			string selected = cbb_tentruyen.SelectedItem.ToString();
-			cnn = new SqlConnection(connectionString);
-			cnn.Open();
-			string sql = "select dongia from thongtin where tentruyen = @tentruyen;";
-			using(SqlCommand cmd = new SqlCommand(sql, cnn))
+			string selected = cbb_tentruyen.Text;
+			if (selected == "")
+				txt_dongia.Text = "";
+			else
 			{
-				cmd.Parameters.AddWithValue("@tentruyen", selected);
-				using (SqlDataReader dr = cmd.ExecuteReader())
-				{
-					if (dr.Read())
-						txt_dongia.Text = dr["dongia"].ToString();
-					
-				}
+				string sql = "select giatruyen from truyen where tentruyen = @selected";
+				object[] para = { selected };
+				dt = FillData(sql, para);
+				if (dt.Rows.Count > 0)
+					txt_dongia.Text = dt.Rows[0][0].ToString();
+				cnn.Close();
 			}
-			cnn.Close();
 		}
+
 
 		private void cbb_tentruyen_DropDownClosed(object sender, EventArgs e)
 		{
 
+		}
+
+		private void txt_dongia_TextChanged(object sender, EventArgs e)
+		{
+			
+		}
+
+		private void cbb_tentruyen_TextUpdate(object sender, EventArgs e)
+		{
+			string selected = cbb_tentruyen.Text;
+			if (selected == "")
+				txt_dongia.Text = "";
+			else
+			{
+				string sql = "select giatruyen from truyen where tentruyen = @selected";
+				object[] para = { cbb_tentruyen.Text };
+				dtgv.DataSource = FillData(sql, para);
+				cnn.Close();
+			}
 		}
 
 		// TODO: Phải chia ra 2 bảng riêng: 1 bảng khách mượn, 1 bảng truyện. Tên truyện trong bảng truyện là khóa chính tham chiếu đến tên truyện trong bảng khách mượn
