@@ -162,8 +162,13 @@ namespace QuanLyCuaHangTruyen
 
 		private void btn_tra_Click(object sender, EventArgs e)
 		{
+			string ghichu = dtgv.CurrentRow.Cells["Ghi chú"].Value.ToString();
 			if (AnyBoxEmpty())
 				MessageBox.Show("Hãy chọn khách hàng cần trả");
+			else if (ghichu != "Chưa trả")
+			{
+				MessageBox.Show("Khách hàng này đã trả sách");
+			}	
             else
             {
 				int thanhtien = Convert.ToInt32(txt_dongia.Text) * (dtp_ngaytra.Value - dtp_ngaymuon.Value).Days;
@@ -190,7 +195,6 @@ namespace QuanLyCuaHangTruyen
 				cbb_tentruyen.Text = cur_row.Cells["Tên truyện"].Value.ToString();
 				cbb_tentruyen_SelectedIndexChanged(sender, e);
 				dtp_ngaymuon.Value = Convert.ToDateTime(cur_row.Cells["Ngày mượn"].Value);
-				getAllData();
 			}
 		}
 	}
