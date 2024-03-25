@@ -30,6 +30,8 @@
 		{
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+			this.cb_nu = new System.Windows.Forms.RadioButton();
+			this.cb_nam = new System.Windows.Forms.RadioButton();
 			this.txt_hoten = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.cbb_quequan = new System.Windows.Forms.ComboBox();
@@ -43,15 +45,11 @@
 			this.btn_them = new System.Windows.Forms.Button();
 			this.cbb_donvi = new System.Windows.Forms.ComboBox();
 			this.cbb_hocvi = new System.Windows.Forms.ComboBox();
-			this.cb_nam = new System.Windows.Forms.RadioButton();
-			this.cb_nu = new System.Windows.Forms.RadioButton();
-			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
 			this.splitContainer1.Panel1.SuspendLayout();
 			this.splitContainer1.Panel2.SuspendLayout();
 			this.splitContainer1.SuspendLayout();
-			this.tableLayoutPanel1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// dataGridView1
@@ -85,7 +83,8 @@
 			// splitContainer1.Panel1
 			// 
 			this.splitContainer1.Panel1.BackColor = System.Drawing.Color.Cyan;
-			this.splitContainer1.Panel1.Controls.Add(this.tableLayoutPanel1);
+			this.splitContainer1.Panel1.Controls.Add(this.cb_nu);
+			this.splitContainer1.Panel1.Controls.Add(this.cb_nam);
 			this.splitContainer1.Panel1.Controls.Add(this.txt_hoten);
 			this.splitContainer1.Panel1.Controls.Add(this.label1);
 			this.splitContainer1.Panel1.Controls.Add(this.cbb_quequan);
@@ -106,6 +105,28 @@
 			this.splitContainer1.Size = new System.Drawing.Size(780, 184);
 			this.splitContainer1.SplitterDistance = 375;
 			this.splitContainer1.TabIndex = 0;
+			// 
+			// cb_nu
+			// 
+			this.cb_nu.AutoSize = true;
+			this.cb_nu.Location = new System.Drawing.Point(160, 76);
+			this.cb_nu.Name = "cb_nu";
+			this.cb_nu.Size = new System.Drawing.Size(45, 20);
+			this.cb_nu.TabIndex = 2;
+			this.cb_nu.TabStop = true;
+			this.cb_nu.Text = "Nữ";
+			this.cb_nu.UseVisualStyleBackColor = true;
+			// 
+			// cb_nam
+			// 
+			this.cb_nam.AutoSize = true;
+			this.cb_nam.Location = new System.Drawing.Point(84, 76);
+			this.cb_nam.Name = "cb_nam";
+			this.cb_nam.Size = new System.Drawing.Size(57, 20);
+			this.cb_nam.TabIndex = 1;
+			this.cb_nam.TabStop = true;
+			this.cb_nam.Text = "Nam";
+			this.cb_nam.UseVisualStyleBackColor = true;
 			// 
 			// txt_hoten
 			// 
@@ -238,42 +259,6 @@
 			this.cbb_hocvi.TabIndex = 5;
 			this.cbb_hocvi.DropDown += new System.EventHandler(this.cbb_hocvi_DropDown);
 			// 
-			// cb_nam
-			// 
-			this.cb_nam.AutoSize = true;
-			this.cb_nam.Location = new System.Drawing.Point(3, 3);
-			this.cb_nam.Name = "cb_nam";
-			this.cb_nam.Size = new System.Drawing.Size(57, 18);
-			this.cb_nam.TabIndex = 1;
-			this.cb_nam.TabStop = true;
-			this.cb_nam.Text = "Nam";
-			this.cb_nam.UseVisualStyleBackColor = true;
-			// 
-			// cb_nu
-			// 
-			this.cb_nu.AutoSize = true;
-			this.cb_nu.Location = new System.Drawing.Point(103, 3);
-			this.cb_nu.Name = "cb_nu";
-			this.cb_nu.Size = new System.Drawing.Size(45, 18);
-			this.cb_nu.TabIndex = 2;
-			this.cb_nu.TabStop = true;
-			this.cb_nu.Text = "Nữ";
-			this.cb_nu.UseVisualStyleBackColor = true;
-			// 
-			// tableLayoutPanel1
-			// 
-			this.tableLayoutPanel1.ColumnCount = 2;
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tableLayoutPanel1.Controls.Add(this.cb_nu, 1, 0);
-			this.tableLayoutPanel1.Controls.Add(this.cb_nam, 0, 0);
-			this.tableLayoutPanel1.Location = new System.Drawing.Point(85, 72);
-			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-			this.tableLayoutPanel1.RowCount = 1;
-			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tableLayoutPanel1.Size = new System.Drawing.Size(200, 24);
-			this.tableLayoutPanel1.TabIndex = 4;
-			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -292,8 +277,6 @@
 			this.splitContainer1.Panel2.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
 			this.splitContainer1.ResumeLayout(false);
-			this.tableLayoutPanel1.ResumeLayout(false);
-			this.tableLayoutPanel1.PerformLayout();
 			this.ResumeLayout(false);
 
 		}
@@ -316,7 +299,6 @@
 		private System.Windows.Forms.ComboBox cbb_hocvi;
 		private System.Windows.Forms.RadioButton cb_nu;
 		private System.Windows.Forms.RadioButton cb_nam;
-		private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
 	}
 }
 

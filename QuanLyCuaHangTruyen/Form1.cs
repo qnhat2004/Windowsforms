@@ -149,7 +149,7 @@ namespace QuanLyCuaHangTruyen
 			{
 				string sql = "select giatruyen from truyen where tentruyen = @selected";
 				object[] para = { cbb_tentruyen.Text };
-				dtgv.DataSource = FillData(sql, para);
+				FillData(sql, para);
 				cnn.Close();
 			}
 		}

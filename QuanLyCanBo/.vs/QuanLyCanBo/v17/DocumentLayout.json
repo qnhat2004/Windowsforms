@@ -26,12 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -60,6 +56,10 @@
               "EditorCaption": " [Design]"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Form2.cs",
@@ -69,8 +69,7 @@
               "RelativeToolTip": "Form2.cs",
               "ViewState": "AQIAAD8AAAAAAAAAAAAYwHYAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T03:12:25.147Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-22T03:12:25.147Z"
             },
             {
               "$type": "Document",
@@ -81,8 +80,7 @@
               "ToolTip": "D:\\Windowsforms\\QuanLyCanBo\\Form2.cs [Design]",
               "RelativeToolTip": "Form2.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-22T03:07:52.78Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-03-22T03:07:52.78Z"
             }
           ]
         }
