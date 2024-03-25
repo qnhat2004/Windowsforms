@@ -51,6 +51,8 @@
 			// 
 			// dtgv
 			// 
+			this.dtgv.AllowUserToAddRows = false;
+			this.dtgv.AllowUserToDeleteRows = false;
 			this.dtgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -63,13 +65,15 @@
 			this.dtgv.RowTemplate.Height = 24;
 			this.dtgv.Size = new System.Drawing.Size(855, 254);
 			this.dtgv.TabIndex = 0;
+			this.dtgv.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_CellClick);
+			this.dtgv.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_CellContentClick);
 			// 
 			// pictureBox1
 			// 
 			this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-			this.pictureBox1.Location = new System.Drawing.Point(12, 9);
+			this.pictureBox1.Location = new System.Drawing.Point(12, 12);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(391, 258);
+			this.pictureBox1.Size = new System.Drawing.Size(393, 258);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.pictureBox1.TabIndex = 1;
 			this.pictureBox1.TabStop = false;
@@ -193,8 +197,7 @@
 			// 
 			// btn_muon
 			// 
-			this.btn_muon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_muon.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_muon.Location = new System.Drawing.Point(744, 186);
 			this.btn_muon.Name = "btn_muon";
 			this.btn_muon.Size = new System.Drawing.Size(123, 38);
@@ -219,14 +222,14 @@
 			// 
 			// btn_tra
 			// 
-			this.btn_tra.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+			this.btn_tra.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btn_tra.Location = new System.Drawing.Point(744, 232);
 			this.btn_tra.Name = "btn_tra";
 			this.btn_tra.Size = new System.Drawing.Size(123, 35);
 			this.btn_tra.TabIndex = 15;
 			this.btn_tra.Text = "Trả truyện";
 			this.btn_tra.UseVisualStyleBackColor = true;
+			this.btn_tra.Click += new System.EventHandler(this.btn_tra_Click);
 			// 
 			// Form1
 			// 

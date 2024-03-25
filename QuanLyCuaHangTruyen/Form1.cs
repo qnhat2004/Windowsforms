@@ -21,7 +21,6 @@ namespace QuanLyCuaHangTruyen
 
 		string connectionString = "Data Source=SUNSHINE;Initial Catalog=CuaHangTruyen;Integrated Security=True";
 		DataTable dt = null;
-		SqlDataAdapter da = null;
 		SqlConnection cnn = null;
 
 		internal DataTable FillData(string sql, object[] para = null)
@@ -53,7 +52,8 @@ namespace QuanLyCuaHangTruyen
 		private void getAllData()
 		{
 			string sql = "select truyen.giatruyen, stt as 'STT', tenkhach as 'Tên khách', sdt as 'Số điện thoại', khachhang.tentruyen as 'Tên truyện', ngaymuon as 'Ngày mượn', ngaytra as 'Ngày trả', thanhtien as 'Thành tiền', ghichu as 'Ghi chú' from khachhang join truyen on khachhang.tentruyen = truyen.tentruyen";
-			dtgv.DataSource = FillData(sql); 
+			dtgv.DataSource = FillData(sql);
+			dtgv.Columns["giatruyen"].Visible = false;
 		}
 
 		private void pictureBox1_Click(object sender, EventArgs e)
@@ -87,17 +87,22 @@ namespace QuanLyCuaHangTruyen
 			getAllData();
 		}
 
+		bool AnyBoxEmpty()
+		{
+			return (txt_tenkhach.Text == "" || txt_sdt.Text == "" || cbb_tentruyen.Text == "");
+		}
+
 		private void btn_muon_Click(object sender, EventArgs e)
 		{
-			if (txt_tenkhach.Text == "" || txt_sdt.Text == "" || cbb_tentruyen.Text == "")
+			if (AnyBoxEmpty())
 				MessageBox.Show("Vui lòng nhập đầy đủ thông tin");
 			else
 			{
 				int days = (dtp_ngaytra.Value - dtp_ngaymuon.Value).Days;
-				int thanh_tien = days * Convert.ToInt32(txt_dongia.Text);
-				string sql = "insert into khachhang (tenkhach, sdt, tentruyen, dongia, ngaymuon, ngaytra, thanhtien, ghichu) values ( @tenkhach, @sdt, @tentruyen, @dongia, @ngaymuon, @ngaytra, @thanhtien, @ghichu )";
-				object[] para = new object[]{ txt_tenkhach.Text, txt_sdt.Text, cbb_tentruyen.Text, txt_dongia.Text, dtp_ngaymuon.Text, dtp_ngaytra.Text, thanh_tien.ToString(), "Chưa trả" };
+				string sql = "insert into khachhang (tenkhach, sdt, tentruyen, dongia, ngaymuon, ghichu) values ( @tenkhach , @sdt , @tentruyen , @dongia , @ngaymuon , @ghichu )";
+				object[] para = new object[]{ txt_tenkhach.Text, txt_sdt.Text, cbb_tentruyen.Text, txt_dongia.Text, dtp_ngaymuon.Value.ToString("yyyy-MM-dd") , "Chưa trả" };
 				FillData(sql, para);
+				getAllData();
 			}
 		}
 
@@ -119,7 +124,7 @@ namespace QuanLyCuaHangTruyen
 				object[] para = { selected };
 				dt = FillData(sql, para);
 				if (dt.Rows.Count > 0)
-					txt_dongia.Text = dt.Rows[0][0].ToString();
+					txt_dongia.Text = dt.Rows[0]["giatruyen"].ToString();
 				cnn.Close();
 			}
 		}
@@ -146,6 +151,43 @@ namespace QuanLyCuaHangTruyen
 				object[] para = { cbb_tentruyen.Text };
 				dtgv.DataSource = FillData(sql, para);
 				cnn.Close();
+			}
+		}
+
+
+		private void btn_tra_Click(object sender, EventArgs e)
+		{
+			if (AnyBoxEmpty())
+				MessageBox.Show("Hãy chọn khách hàng cần trả");
+            else
+            {
+				int thanhtien = Convert.ToInt32(txt_dongia.Text) * (dtp_ngaytra.Value - dtp_ngaymuon.Value).Days;
+				string sql = "update khachhang set ngaytra = @ngaytra , thanhtien = @thanhtien , ghichu = @ghichu where stt = @stt ";
+				string stt = dtgv.CurrentRow.Cells["STT"].Value.ToString();
+				object[] para = new object[] { dtp_ngaytra.Value.ToString("yyyy-MM-dd") , thanhtien , "" , stt };
+				FillData(sql, para);
+				getAllData();
+			}
+        }
+
+		private void dtgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+			
+		}
+
+		private void dtgv_CellClick(object sender, DataGridViewCellEventArgs e)
+		{
+			if (e.RowIndex >= 0)
+			{
+				DataGridViewRow cur_row = this.dtgv.Rows[e.RowIndex];
+				txt_tenkhach.Text = cur_row.Cells["Tên khách"].Value.ToString();
+				txt_sdt.Text = cur_row.Cells["Số điện thoại"].Value.ToString();
+				cbb_tentruyen.Text = cur_row.Cells["Tên truyện"].Value.ToString();
+				txt_tenkhach.Text = cur_row.Cells["Tên khách"].Value.ToString();
+				cbb_tentruyen_SelectedIndexChanged(sender, e);
+				dtp_ngaymuon.Value = Convert.ToDateTime(cur_row.Cells["Ngày mượn"].Value);
+				dtp_ngaytra.Value = Convert.ToDateTime(cur_row.Cells["Ngày trả"].Value);
+				getAllData();
 			}
 		}
 
