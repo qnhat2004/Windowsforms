@@ -23,6 +23,11 @@ namespace QuanLyCuaHangTruyen
 		DataTable dt = null;
 		SqlConnection cnn = null;
 
+		/* 
+		 * Chức năng: Thực hiện truy vấn dữ liệu
+		 * - Nếu lấy giá trị trả về: trả về dữ liệu dưới dạng DataTable
+		 * - Nếu không lấy giá trị trả về: thực hiện truy vấn, không trả về dữ liệu
+		 */ 
 		internal DataTable FillData(string sql, object[] para = null)
 		{
 			DataTable dt = new DataTable();
@@ -35,7 +40,7 @@ namespace QuanLyCuaHangTruyen
 				List<string> strings = new List<string>();
 				foreach (string s in tmp)
 				{
-					if (s[0] == '@')
+					if (s != "" && s[0] == '@')
 						strings.Add(s);
 				}
 				for (int i = 0; i < para.Length; ++i)
@@ -164,7 +169,7 @@ namespace QuanLyCuaHangTruyen
 				int thanhtien = Convert.ToInt32(txt_dongia.Text) * (dtp_ngaytra.Value - dtp_ngaymuon.Value).Days;
 				string sql = "update khachhang set ngaytra = @ngaytra , thanhtien = @thanhtien , ghichu = @ghichu where stt = @stt ";
 				string stt = dtgv.CurrentRow.Cells["STT"].Value.ToString();
-				object[] para = new object[] { dtp_ngaytra.Value.ToString("yyyy-MM-dd") , thanhtien , "" , stt };
+				object[] para = new object[] { dtp_ngaytra.Value.ToString("yyyy-MM-dd") , thanhtien , " " , stt };
 				FillData(sql, para);
 				getAllData();
 			}
@@ -183,14 +188,10 @@ namespace QuanLyCuaHangTruyen
 				txt_tenkhach.Text = cur_row.Cells["Tên khách"].Value.ToString();
 				txt_sdt.Text = cur_row.Cells["Số điện thoại"].Value.ToString();
 				cbb_tentruyen.Text = cur_row.Cells["Tên truyện"].Value.ToString();
-				txt_tenkhach.Text = cur_row.Cells["Tên khách"].Value.ToString();
 				cbb_tentruyen_SelectedIndexChanged(sender, e);
 				dtp_ngaymuon.Value = Convert.ToDateTime(cur_row.Cells["Ngày mượn"].Value);
-				dtp_ngaytra.Value = Convert.ToDateTime(cur_row.Cells["Ngày trả"].Value);
 				getAllData();
 			}
 		}
-
-		// TODO: Phải chia ra 2 bảng riêng: 1 bảng khách mượn, 1 bảng truyện. Tên truyện trong bảng truyện là khóa chính tham chiếu đến tên truyện trong bảng khách mượn
 	}
 }
