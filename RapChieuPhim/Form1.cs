@@ -35,8 +35,8 @@ namespace RapChieuPhim
 
 		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
 		{
-			lbl_tenphim.Text = comboBox1.Text;
-			Dictionary<>
+			//lbl_tenphim.Text = comboBox1.Text;
+			//Dictionary<>
 		}
 
 		int sum = 0;
