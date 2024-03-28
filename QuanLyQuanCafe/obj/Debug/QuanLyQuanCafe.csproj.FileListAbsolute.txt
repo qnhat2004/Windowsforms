@@ -1,0 +1,10 @@
+D:\Windowsforms\QuanLyQuanCafe\bin\Debug\QuanLyQuanCafe.exe.config
+D:\Windowsforms\QuanLyQuanCafe\bin\Debug\QuanLyQuanCafe.exe
+D:\Windowsforms\QuanLyQuanCafe\bin\Debug\QuanLyQuanCafe.pdb
+D:\Windowsforms\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.csproj.AssemblyReference.cache
+D:\Windowsforms\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.Form1.resources
+D:\Windowsforms\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.Properties.Resources.resources
+D:\Windowsforms\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.csproj.GenerateResource.cache
+D:\Windowsforms\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.csproj.CoreCompileInputs.cache
+D:\Windowsforms\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.exe
+D:\Windowsforms\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.pdb
