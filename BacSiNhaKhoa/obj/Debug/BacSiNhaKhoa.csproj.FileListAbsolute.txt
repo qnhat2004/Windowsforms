@@ -1,0 +1,10 @@
+D:\Windowsforms\BacSiNhaKhoa\bin\Debug\BacSiNhaKhoa.exe.config
+D:\Windowsforms\BacSiNhaKhoa\bin\Debug\BacSiNhaKhoa.exe
+D:\Windowsforms\BacSiNhaKhoa\bin\Debug\BacSiNhaKhoa.pdb
+D:\Windowsforms\BacSiNhaKhoa\obj\Debug\BacSiNhaKhoa.csproj.AssemblyReference.cache
+D:\Windowsforms\BacSiNhaKhoa\obj\Debug\BacSiNhaKhoa.Form1.resources
+D:\Windowsforms\BacSiNhaKhoa\obj\Debug\BacSiNhaKhoa.Properties.Resources.resources
+D:\Windowsforms\BacSiNhaKhoa\obj\Debug\BacSiNhaKhoa.csproj.GenerateResource.cache
+D:\Windowsforms\BacSiNhaKhoa\obj\Debug\BacSiNhaKhoa.csproj.CoreCompileInputs.cache
+D:\Windowsforms\BacSiNhaKhoa\obj\Debug\BacSiNhaKhoa.exe
+D:\Windowsforms\BacSiNhaKhoa\obj\Debug\BacSiNhaKhoa.pdb
