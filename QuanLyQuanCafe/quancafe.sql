@@ -7,6 +7,7 @@ create table douong (
 )
 
 create table ban (
+	stt int identity,
 	soban nvarchar(10),
 	tendouong nvarchar(50) foreign key references douong(tendouong),
 	ghichu nvarchar(50),
