@@ -1,0 +1,10 @@
+D:\Windowsforms\BanVeXeKhach\bin\Debug\BanVeXeKhach.exe.config
+D:\Windowsforms\BanVeXeKhach\bin\Debug\BanVeXeKhach.exe
+D:\Windowsforms\BanVeXeKhach\bin\Debug\BanVeXeKhach.pdb
+D:\Windowsforms\BanVeXeKhach\obj\Debug\BanVeXeKhach.csproj.AssemblyReference.cache
+D:\Windowsforms\BanVeXeKhach\obj\Debug\BanVeXeKhach.Form1.resources
+D:\Windowsforms\BanVeXeKhach\obj\Debug\BanVeXeKhach.Properties.Resources.resources
+D:\Windowsforms\BanVeXeKhach\obj\Debug\BanVeXeKhach.csproj.GenerateResource.cache
+D:\Windowsforms\BanVeXeKhach\obj\Debug\BanVeXeKhach.csproj.CoreCompileInputs.cache
+D:\Windowsforms\BanVeXeKhach\obj\Debug\BanVeXeKhach.exe
+D:\Windowsforms\BanVeXeKhach\obj\Debug\BanVeXeKhach.pdb
