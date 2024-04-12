@@ -24,12 +24,9 @@ namespace QuanLySinhVien
 			SqlConnection cnn = new SqlConnection(connectionString);
 			cnn.Open();
 			SqlCommand cmd = new SqlCommand(sql, cnn);
-			SqlDataAdapter da = new SqlDataAdapter(sql, cnn);
-			DataTable dt = new DataTable();
-			da.Fill(dt);
 			if (para != null)
 			{
-				string[] tmp = sql.Split(' ');
+				string[] tmp = sql.Split();
 				List<string> strings = new List<string>();
 				foreach(string s in tmp)
 				{
@@ -42,13 +39,25 @@ namespace QuanLySinhVien
 				{
 					cmd.Parameters.AddWithValue(strings[i], para[i]);
 				}
-				cmd.ExecuteNonQuery();
 			}
+			SqlDataAdapter da = new SqlDataAdapter(cmd);
+			DataTable dt = new DataTable();
+			da.Fill(dt);
 			cnn.Close();
 			return dt;
 		}
 
+		//internal void getAllData()
+		//{
+		//	string sql = 
+		//}
+
 		private void toolStripButton1_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void toolStripButton1_Click_1(object sender, EventArgs e)
 		{
 
 		}
