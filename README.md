@@ -1,7 +1,7 @@
 # Windowsforms 
 Bài tập winform mình làm trong quá trình học Lập trình Window
 
-# Guide
+# Quick start
 - Vào search -> Gõ cmd
 - Copy dòng này vào cmd
   
